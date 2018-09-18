@@ -11,7 +11,39 @@
 		121BC17921509A3800BD885B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121BC17821509A3800BD885B /* ViewController.swift */; };
 		121BC17B21509A3C00BD885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121BC17A21509A3C00BD885B /* Assets.xcassets */; };
 		121BC17E21509A3C00BD885B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121BC17C21509A3C00BD885B /* Main.storyboard */; };
+		121BC18D21509A5D00BD885B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BC18C21509A5D00BD885B /* Cocoa.framework */; };
+		121BC19021509A5D00BD885B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121BC18F21509A5D00BD885B /* SafariExtensionHandler.swift */; };
+		121BC19221509A5D00BD885B /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121BC19121509A5D00BD885B /* SafariExtensionViewController.swift */; };
+		121BC19521509A5D00BD885B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19321509A5D00BD885B /* SafariExtensionViewController.xib */; };
+		121BC19821509A5D00BD885B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19721509A5D00BD885B /* script.js */; };
+		121BC19A21509A5D00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
+		121BC19E21509A5D00BD885B /* EZProxy Safari.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 121BC18A21509A5D00BD885B /* EZProxy Safari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		121BC19C21509A5D00BD885B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 121BC16B21509A3800BD885B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 121BC18921509A5D00BD885B;
+			remoteInfo = "EZProxy Safari";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		121BC1A221509A5D00BD885B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				121BC19E21509A5D00BD885B /* EZProxy Safari.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		121BC17321509A3800BD885B /* EZProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,7 +52,16 @@
 		121BC17A21509A3C00BD885B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		121BC17D21509A3C00BD885B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		121BC17F21509A3C00BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		121BC18021509A3C00BD885B /* EZProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZProxy.entitlements; sourceTree = "<group>"; };
+		121BC18A21509A5D00BD885B /* EZProxy Safari.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZProxy Safari.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		121BC18C21509A5D00BD885B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		121BC18F21509A5D00BD885B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		121BC19121509A5D00BD885B /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		121BC19421509A5D00BD885B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		121BC19621509A5D00BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		121BC19721509A5D00BD885B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZProxy.entitlements; sourceTree = "<group>"; };
+		12C4AC3B2150AA3F0003B476 /* EZProxy Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EZProxy Safari.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +72,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		121BC18721509A5D00BD885B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121BC18D21509A5D00BD885B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				121BC17521509A3800BD885B /* EZProxy */,
+				121BC18E21509A5D00BD885B /* EZProxy Safari */,
+				121BC18B21509A5D00BD885B /* Frameworks */,
 				121BC17421509A3800BD885B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				121BC17321509A3800BD885B /* EZProxy.app */,
+				121BC18A21509A5D00BD885B /* EZProxy Safari.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,14 +105,36 @@
 		121BC17521509A3800BD885B /* EZProxy */ = {
 			isa = PBXGroup;
 			children = (
+				12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */,
 				121BC17621509A3800BD885B /* AppDelegate.swift */,
 				121BC17821509A3800BD885B /* ViewController.swift */,
 				121BC17A21509A3C00BD885B /* Assets.xcassets */,
 				121BC17C21509A3C00BD885B /* Main.storyboard */,
 				121BC17F21509A3C00BD885B /* Info.plist */,
-				121BC18021509A3C00BD885B /* EZProxy.entitlements */,
 			);
 			path = EZProxy;
+			sourceTree = "<group>";
+		};
+		121BC18B21509A5D00BD885B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				121BC18C21509A5D00BD885B /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		121BC18E21509A5D00BD885B /* EZProxy Safari */ = {
+			isa = PBXGroup;
+			children = (
+				12C4AC3B2150AA3F0003B476 /* EZProxy Safari.entitlements */,
+				121BC18F21509A5D00BD885B /* SafariExtensionHandler.swift */,
+				121BC19121509A5D00BD885B /* SafariExtensionViewController.swift */,
+				121BC19321509A5D00BD885B /* SafariExtensionViewController.xib */,
+				121BC19621509A5D00BD885B /* Info.plist */,
+				121BC19721509A5D00BD885B /* script.js */,
+				121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */,
+			);
+			path = "EZProxy Safari";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,15 +147,34 @@
 				121BC16F21509A3800BD885B /* Sources */,
 				121BC17021509A3800BD885B /* Frameworks */,
 				121BC17121509A3800BD885B /* Resources */,
+				121BC1A221509A5D00BD885B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				121BC19D21509A5D00BD885B /* PBXTargetDependency */,
 			);
 			name = EZProxy;
 			productName = EZProxy;
 			productReference = 121BC17321509A3800BD885B /* EZProxy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		121BC18921509A5D00BD885B /* EZProxy Safari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 121BC19F21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Safari" */;
+			buildPhases = (
+				121BC18621509A5D00BD885B /* Sources */,
+				121BC18721509A5D00BD885B /* Frameworks */,
+				121BC18821509A5D00BD885B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EZProxy Safari";
+			productName = "EZProxy Safari";
+			productReference = 121BC18A21509A5D00BD885B /* EZProxy Safari.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +188,19 @@
 				TargetAttributes = {
 					121BC17221509A3800BD885B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					121BC18921509A5D00BD885B = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -112,6 +218,7 @@
 			projectRoot = "";
 			targets = (
 				121BC17221509A3800BD885B /* EZProxy */,
+				121BC18921509A5D00BD885B /* EZProxy Safari */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +230,17 @@
 			files = (
 				121BC17B21509A3C00BD885B /* Assets.xcassets in Resources */,
 				121BC17E21509A3C00BD885B /* Main.storyboard in Resources */,
+				121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121BC18821509A5D00BD885B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121BC19A21509A5D00BD885B /* ToolbarItemIcon.pdf in Resources */,
+				121BC19521509A5D00BD885B /* SafariExtensionViewController.xib in Resources */,
+				121BC19821509A5D00BD885B /* script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +256,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		121BC18621509A5D00BD885B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				121BC19221509A5D00BD885B /* SafariExtensionViewController.swift in Sources */,
+				121BC19021509A5D00BD885B /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		121BC19D21509A5D00BD885B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 121BC18921509A5D00BD885B /* EZProxy Safari */;
+			targetProxy = 121BC19C21509A5D00BD885B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		121BC17C21509A3C00BD885B /* Main.storyboard */ = {
@@ -147,6 +282,14 @@
 				121BC17D21509A3C00BD885B /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		121BC19321509A5D00BD885B /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				121BC19421509A5D00BD885B /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -270,8 +413,8 @@
 		121BC18421509A3C00BD885B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EZProxy/EZProxy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
@@ -289,8 +432,8 @@
 		121BC18521509A3C00BD885B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EZProxy/EZProxy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
@@ -301,6 +444,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.stemtl.EZProxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		121BC1A021509A5D00BD885B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
+				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.stemtl.EZProxy.EZProxy-Safari";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		121BC1A121509A5D00BD885B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
+				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.stemtl.EZProxy.EZProxy-Safari";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -322,6 +503,15 @@
 			buildConfigurations = (
 				121BC18421509A3C00BD885B /* Debug */,
 				121BC18521509A3C00BD885B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		121BC19F21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Safari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				121BC1A021509A5D00BD885B /* Debug */,
+				121BC1A121509A5D00BD885B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
