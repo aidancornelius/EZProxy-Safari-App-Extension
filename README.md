@@ -11,11 +11,11 @@ If you have no idea what this stuff is, and just want the extension, use the rel
 
 ## Installing
 
-Drag the downloaded EZProxy app to your Applications folder
-Open the freshly dragged EZProxy
-Enter your library proxy address and save it
-Open Safari, click on "Safari" in the menu bar, then Preferences
-Go to Extensions, and enable "EZProxy Safari"
+1. Drag the downloaded EZProxy app to your Applications folder
+2. Open the freshly dragged EZProxy
+3. Enter your library proxy address and save it
+4. Open Safari, click on "Safari" in the menu bar, then Preferences
+5. Go to Extensions, and enable "EZProxy Safari"
 
 ## Settings
 
