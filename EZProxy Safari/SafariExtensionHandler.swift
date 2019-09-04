@@ -24,7 +24,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 text2 = try String(contentsOf: fileURL, encoding: .utf8)
             }
             catch {
-                text2 = "stemtl.net"
+                text2 = "aidan.cornelius-bell.com" // Made a minor tweak to this URL.
             }
         }
         
