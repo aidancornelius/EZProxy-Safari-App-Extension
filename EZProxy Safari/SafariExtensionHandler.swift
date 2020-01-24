@@ -11,7 +11,7 @@ import SafariServices
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
     func readSettings() -> String{
-        let file = "EZProxy-Safari.text" //this is the file. we will write to and read from it
+        let file = "EZProxy-Base-URL.text" //this is the file. we will write to and read from it
         
         var text2 = ""
         
@@ -24,10 +24,27 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 text2 = try String(contentsOf: fileURL, encoding: .utf8)
             }
             catch {
-                text2 = "stemtl.net"
+                text2 = "aidan.cornelius-bell.com"
             }
         }
         
+        return text2
+    }
+    
+    func readTabClosePreference() -> String {
+        // logic to allow a tab to close if user requests
+        let file = "EZProxy-CloseTab-Preference.text" // preference for tab close
+        var text2 = ""
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = dir.appendingPathComponent(file)
+            
+            do {
+                text2 = try String(contentsOf: fileURL, encoding: .utf8)
+            } catch {
+                text2 = "keep" // default to keep the tab
+            }
+        }
+                            
         return text2
     }
     
@@ -57,6 +74,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                         let newURLString = "http://" + libproxy + "/login?url=http://" + host! + path!
                         
                         let completeLibProxURL = URL(string: newURLString)
+                        
+                        if self.readTabClosePreference() == "close" {
+                            activeTab!.close()
+                        }
                         
                         window.openTab(with: completeLibProxURL!, makeActiveIfPossible: true, completionHandler: nil)
                         
