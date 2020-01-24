@@ -63,6 +63,21 @@ class ViewController: NSViewController {
         return text2
     }
     
+    func readCloseTabPreference() -> String {
+        var setting = ""
+        
+        let home = FileManager.default.homeDirectoryForCurrentUser
+        let safariExtDir = home.appendingPathComponent("Library/Containers/com.cornelius-bell.EZProxy.EZProxy-Safari/Data/Documents/")
+        let fileUrl = safariExtDir.appendingPathComponent("EZProxy-CloseTab-Preference.text")
+        do {
+            setting = try String(contentsOf: fileUrl, encoding: .utf8)
+        } catch{
+            setting = "keep"
+        }
+        
+        return setting
+    }
+    
     @IBAction func updateProxyClicked(_ sender: Any) {
         NSLog("I have been asked to set the proxy URL to: " + proxyUpdateField.stringValue)
         
@@ -117,6 +132,14 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         proxyUpdateField.stringValue = readSettings()
+        if readCloseTabPreference() == "close" {
+            tabCloseBehaviour.setSelected(true, forSegment: 0)
+            tabCloseBehaviour.setSelected(false, forSegment: 1)
+        } else {
+            tabCloseBehaviour.setSelected(false, forSegment: 0)
+            tabCloseBehaviour.setSelected(true, forSegment: 1)
+        }
+        
     }
 
     override var representedObject: Any? {
