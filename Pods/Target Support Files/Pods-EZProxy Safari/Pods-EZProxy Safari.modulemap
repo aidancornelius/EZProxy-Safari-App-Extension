@@ -1,0 +1,6 @@
+framework module Pods_EZProxy_Safari {
+  umbrella header "Pods-EZProxy Safari-umbrella.h"
+
+  export *
+  module * { export * }
+}

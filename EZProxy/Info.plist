@@ -30,5 +30,9 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://flinders-university.s3.us-east-1.amazonaws.com/projects/ezproxy/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>blcKw7wulYWftW12LDoZtxQqmNTTfd9oJtTFsMbbNHY=</string>
 </dict>
 </plist>
