@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillFinishLaunching(_ notification: Notification) {
-        PFMoveToApplicationsFolderIfNecessary()
+        // Disabling this because of the app sandbox: PFMoveToApplicationsFolderIfNecessary()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

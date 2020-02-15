@@ -10,43 +10,28 @@ import SafariServices
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
-    func readSettings() -> String{
-        let file = "EZProxy-Base-URL.text" //this is the file. we will write to and read from it
+    func getDataFromPlist( theKey: String ) -> Any {
+
+        let fileManager = FileManager.default
         
-        var text2 = ""
+        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist")
         
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            
-            let fileURL = dir.appendingPathComponent(file)
-            
-            //reading
-            do {
-                text2 = try String(contentsOf: fileURL, encoding: .utf8)
-            }
-            catch {
-                text2 = "aidan.cornelius-bell.com"
-            }
+        let plistXML = fileManager.contents(atPath: url!.path)
+        
+        var propertyListFormat =  PropertyListSerialization.PropertyListFormat.xml
+        var plistData: [String: AnyObject] = [:]
+        
+        do {
+            plistData = try PropertyListSerialization.propertyList(from: plistXML!, options: .mutableContainersAndLeaves, format: &propertyListFormat) as! [String:AnyObject]
+        } catch {
+            print("Error reading plist: \(error), format: \(propertyListFormat)")
         }
         
-        return text2
+        let data = plistData[theKey]
+        
+        return data ?? "nil"
     }
     
-    func readTabClosePreference() -> String {
-        // logic to allow a tab to close if user requests
-        let file = "EZProxy-CloseTab-Preference.text" // preference for tab close
-        var text2 = ""
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let fileURL = dir.appendingPathComponent(file)
-            
-            do {
-                text2 = try String(contentsOf: fileURL, encoding: .utf8)
-            } catch {
-                text2 = "keep" // default to keep the tab
-            }
-        }
-                            
-        return text2
-    }
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
         // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
@@ -69,13 +54,15 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                         let url = URL(string: urlString)
                         let host = url?.host
                         let path = url?.path
-                        let libproxy = self.readSettings()
+                        let libproxy = self.getDataFromPlist( theKey: "proxyBase" ) as! String
+                        var ssl = ""
+                        if self.getDataFromPlist(theKey: "useSSL") as! Bool { ssl = "https://"} else { ssl = "http://" }
                         
-                        let newURLString = "http://" + libproxy + "/login?url=http://" + host! + path!
+                        let newURLString = ssl + libproxy + "/login?url=http://" + host! + path!
                         
                         let completeLibProxURL = URL(string: newURLString)
                         
-                        if self.readTabClosePreference() == "close" {
+                        if self.getDataFromPlist( theKey: "keepTab" ) as! Bool == false {
                             activeTab!.close()
                         }
                         

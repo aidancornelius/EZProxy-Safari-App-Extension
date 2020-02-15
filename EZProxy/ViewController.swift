@@ -12,98 +12,150 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var proxyUpdateField: NSTextField!
     @IBOutlet weak var tabCloseBehaviour: NSSegmentedControl!
+    @IBOutlet weak var useSSLBehaviour: NSButton!
+    
+    func createPlistForDataStorage() {
+        let fileManager = FileManager.default
+        
+        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist")
+        
+        if(!fileManager.fileExists(atPath: url!.path)){
+            let data : [String: Any] = [
+                "proxyBase": "ezproxy.flinders.edu.au",
+                "keepTab": true,
+                "useSSL": false,
+            ]
 
-    func writeSettings( theSetting: String ) {
-        let file = "EZProxy-Base-URL.text" //this is the file. we will write to and read from it
-        
-       let text = theSetting //just a text
-        
-        /* if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        */
-        
-       // let file = "EZProxy-Safari.text" //this is the file. we will write to and read from it
-        
-        var text2 = ""
-        
-        let home = FileManager.default.homeDirectoryForCurrentUser
-        let safariExtDir = home.appendingPathComponent("Library/Containers/com.cornelius-bell.EZProxy.EZProxy-Safari/Data/Documents/")
-        
-        let fileURL = safariExtDir.appendingPathComponent(file)
-        
-            //let fileURL = dir.appendingPathComponent(file)
+            if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell") {
+                let newDirectory = directory.appendingPathComponent("Backups")
+                try? fileManager.createDirectory(at: newDirectory, withIntermediateDirectories: false, attributes: nil)
+            }
             
-        //writing
-        do {
-            try text.write(to: fileURL, atomically: false, encoding: .utf8)
+            let someData = NSDictionary(dictionary: data)
+            do {
+                let isWritten = try someData.write(to: url!)
+                print("Creating settings plist: \(isWritten)")
+            } catch {
+                print(error)
+            }
+        } else {
+            print("Settings plist exists")
         }
-        catch {/* error handling here */}
-            
-        
     }
     
-    func readSettings() -> String{
-        let file = "EZProxy-Base-URL.text" //this is the file. we will write to and read from it
+    func getDataFromPlist( theKey: String ) -> Any {
+        createPlistForDataStorage()
         
-        var text2 = ""
+        let fileManager = FileManager.default
         
-        let home = FileManager.default.homeDirectoryForCurrentUser
-        let safariExtDir = home.appendingPathComponent("Library/Containers/com.cornelius-bell.EZProxy.EZProxy-Safari/Data/Documents/")
+        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist")
         
-        let fileURL = safariExtDir.appendingPathComponent(file)
+        let plistXML = fileManager.contents(atPath: url!.path)
         
-        //reading
+        var propertyListFormat =  PropertyListSerialization.PropertyListFormat.xml
+        var plistData: [String: AnyObject] = [:]
+        
         do {
-            text2 = try String(contentsOf: fileURL, encoding: .utf8)
+            plistData = try PropertyListSerialization.propertyList(from: plistXML!, options: .mutableContainersAndLeaves, format: &propertyListFormat) as! [String:AnyObject]
+        } catch {
+            print("Error reading plist: \(error), format: \(propertyListFormat)")
         }
-        catch {
-            text2 = "ezproxy.flinders.edu.au"
-        }
-    
         
-        return text2
+        let data = plistData[theKey]
+        
+        return data ?? "nil"
+    }
+
+    
+    func writeToPlist( data : [String: Any] ) ->Bool{
+        let fileManager = FileManager.default
+        
+        let url = (fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist"))!
+        let someData = NSDictionary(dictionary: data)
+        do {
+            let isWritten = try someData.write(to: url)
+            print("Creating settings plist: \(isWritten)")
+            return true
+        } catch {
+            print(error)
+            return false
+        }
+    }
+    
+    func writeSettings( proxyBase: String? = nil, keepTab: Bool? = nil, useSSL: Bool? = nil ) ->Bool {
+        var newProxyBase = ""
+        var newKeepTab = false
+        var newUseSSL = false
+        
+        if (proxyBase != nil) {
+            newProxyBase = proxyBase as! String
+        } else {
+            newProxyBase = getDataFromPlist(theKey: "proxyBase") as! String
+        }
+        if (keepTab != nil) {
+            newKeepTab = keepTab as! Bool
+        } else {
+            newKeepTab = getDataFromPlist(theKey: "keepTab") as! Bool
+        }
+        if (useSSL != nil) {
+            newUseSSL = useSSL as! Bool
+        } else {
+            newUseSSL = getDataFromPlist(theKey: "useSSL") as! Bool
+        }
+        
+        let data : [String: Any] =
+            ["proxyBase": newProxyBase,
+             "keepTab": newKeepTab,
+             "useSSL": newUseSSL,]
+        return writeToPlist(data: data)
+    }
+    
+    func readProxySettings() -> String {
+        getDataFromPlist( theKey: "proxyBase" ) as! String
+    }
+    
+    func updateKeepTabSettings() {
+        let keepTab = getDataFromPlist(theKey: "keepTab") as! Bool
+        
+        if (keepTab == true) {
+            tabCloseBehaviour.setSelected(true, forSegment: 1)
+            tabCloseBehaviour.setSelected(false, forSegment: 0)
+        } else {
+            tabCloseBehaviour.setSelected(false, forSegment: 1)
+            tabCloseBehaviour.setSelected(true, forSegment: 0)
+        }
+    }
+    
+    func updateUseSSLSettings() {
+        if ( getDataFromPlist( theKey: "useSSL" ) as! Bool == true) {
+            
+        } else {
+            useSSLBehaviour.setNextState()
+        }
+    }
+    
+    @IBAction func useSSLClicked(_ sender: Any) {
+        if (useSSLBehaviour!.state == NSControl.StateValue(rawValue: 0)) {
+            writeSettings(useSSL: true)
+        } else {
+            writeSettings(useSSL: false)
+        }
     }
     
     @IBAction func updateProxyClicked(_ sender: Any) {
         NSLog("I have been asked to set the proxy URL to: " + proxyUpdateField.stringValue)
         
-        writeSettings(theSetting: proxyUpdateField.stringValue)
+        writeSettings(proxyBase: proxyUpdateField.stringValue)
     }
     
     @IBAction func tabCloseBehaviourDidChange(_ sender: Any) {
         // blah blah
         if tabCloseBehaviour.selectedSegment == 1 {
             // Keep original tab
-            
-            let file = "EZProxy-CloseTab-Preference.text" // preference for tab close
-            let home = FileManager.default.homeDirectoryForCurrentUser
-                   let safariExtDir = home.appendingPathComponent("Library/Containers/com.cornelius-bell.EZProxy.EZProxy-Safari/Data/Documents/")
-                   
-                   let fileURL = safariExtDir.appendingPathComponent(file)
-                   
-                       //let fileURL = dir.appendingPathComponent(file)
-                       
-                   //writing
-                   do {
-                        let text = "keep"
-                       try text.write(to: fileURL, atomically: false, encoding: .utf8)
-                   }
-                   catch {/* error handling here */}
+            writeSettings(keepTab: true)
         } else {
             // Close original tab
-            let file = "EZProxy-CloseTab-Preference.text" // preference for tab close
-            let home = FileManager.default.homeDirectoryForCurrentUser
-                   let safariExtDir = home.appendingPathComponent("Library/Containers/com.cornelius-bell.EZProxy.EZProxy-Safari/Data/Documents/")
-                   
-                   let fileURL = safariExtDir.appendingPathComponent(file)
-                   
-                       //let fileURL = dir.appendingPathComponent(file)
-                       
-                   //writing
-                   do {
-                        let text = "close"
-                       try text.write(to: fileURL, atomically: false, encoding: .utf8)
-                   }
-                   catch {/* error handling here */}
+           writeSettings(keepTab: false)
         }
     }
     
@@ -113,10 +165,16 @@ class ViewController: NSViewController {
         )
     }
     
+    override func viewWillAppear() {
+        createPlistForDataStorage()
+        print(getDataFromPlist(theKey: "proxyBase"))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        proxyUpdateField.stringValue = readSettings()
+        proxyUpdateField.stringValue = readProxySettings()
+        updateKeepTabSettings()
+        updateUseSSLSettings()
     }
 
     override var representedObject: Any? {

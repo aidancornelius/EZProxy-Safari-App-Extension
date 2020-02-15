@@ -19,6 +19,7 @@
 		121BC19A21509A5D00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
 		121BC19E21509A5D00BD885B /* EZProxy Safari.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 121BC18A21509A5D00BD885B /* EZProxy Safari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
+		129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */; };
 		12A3BFA423ED4133006D3947 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A3BFA223ED4133006D3947 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		12A3BFA623ED41C5006D3947 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3BFA523ED41C5006D3947 /* Security.framework */; };
 		7F12A75BFA0F017894AFCFE8 /* Pods_EZProxy_Safari.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FF54F66C1DC53D95B5C699 /* Pods_EZProxy_Safari.framework */; };
@@ -64,6 +65,7 @@
 		121BC19621509A5D00BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		121BC19721509A5D00BD885B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AppIconPurple.pdf; sourceTree = "<group>"; };
 		12A3BFA223ED4133006D3947 /* PFMoveApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PFMoveApplication.m; path = ../Pods/LetsMove/PFMoveApplication.m; sourceTree = "<group>"; };
 		12A3BFA323ED4133006D3947 /* PFMoveApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PFMoveApplication.h; path = ../Pods/LetsMove/PFMoveApplication.h; sourceTree = "<group>"; };
 		12A3BFA523ED41C5006D3947 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -131,6 +133,7 @@
 				121BC17821509A3800BD885B /* ViewController.swift */,
 				121BC17A21509A3C00BD885B /* Assets.xcassets */,
 				121BC17C21509A3C00BD885B /* Main.storyboard */,
+				129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */,
 				121BC17F21509A3C00BD885B /* Info.plist */,
 			);
 			path = EZProxy;
@@ -269,6 +272,7 @@
 				121BC17B21509A3C00BD885B /* Assets.xcassets in Resources */,
 				121BC17E21509A3C00BD885B /* Main.storyboard in Resources */,
 				121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */,
+				129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,10 +523,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EZProxy/EZProxy.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = EZProxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -543,10 +548,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EZProxy/EZProxy.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = EZProxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -568,7 +574,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -591,7 +597,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
