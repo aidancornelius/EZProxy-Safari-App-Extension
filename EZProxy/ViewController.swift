@@ -88,17 +88,17 @@ class ViewController: NSViewController {
         var newUseSSL = false
         
         if (proxyBase != nil) {
-            newProxyBase = proxyBase as! String
+            newProxyBase = proxyBase!
         } else {
             newProxyBase = getDataFromPlist(theKey: "proxyBase") as! String
         }
         if (keepTab != nil) {
-            newKeepTab = keepTab as! Bool
+            newKeepTab = keepTab!
         } else {
             newKeepTab = getDataFromPlist(theKey: "keepTab") as! Bool
         }
         if (useSSL != nil) {
-            newUseSSL = useSSL as! Bool
+            newUseSSL = useSSL!
         } else {
             newUseSSL = getDataFromPlist(theKey: "useSSL") as! Bool
         }
@@ -136,26 +136,26 @@ class ViewController: NSViewController {
     
     @IBAction func useSSLClicked(_ sender: Any) {
         if (useSSLBehaviour!.state == NSControl.StateValue(rawValue: 0)) {
-            writeSettings(useSSL: true)
+            _ = writeSettings(useSSL: true)
         } else {
-            writeSettings(useSSL: false)
+            _ = writeSettings(useSSL: false)
         }
     }
     
     @IBAction func updateProxyClicked(_ sender: Any) {
         NSLog("I have been asked to set the proxy URL to: " + proxyUpdateField.stringValue)
         
-        writeSettings(proxyBase: proxyUpdateField.stringValue)
+        _ = writeSettings(proxyBase: proxyUpdateField.stringValue)
     }
     
     @IBAction func tabCloseBehaviourDidChange(_ sender: Any) {
         // blah blah
         if tabCloseBehaviour.selectedSegment == 1 {
             // Keep original tab
-            writeSettings(keepTab: true)
+            _ = writeSettings(keepTab: true)
         } else {
             // Close original tab
-           writeSettings(keepTab: false)
+           _ = writeSettings(keepTab: false)
         }
     }
     
