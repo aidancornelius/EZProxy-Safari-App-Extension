@@ -8,7 +8,7 @@ target 'EZProxy' do
   # Pods for EZProxy
 
   pod 'Sparkle'
-  pod 'LetsMove'
+  # pod 'LetsMove' – removed not functional in sandbox
 end
 
 target 'EZProxy Safari' do

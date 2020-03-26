@@ -20,7 +20,6 @@
 		121BC19E21509A5D00BD885B /* EZProxy Safari.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 121BC18A21509A5D00BD885B /* EZProxy Safari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
 		129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */; };
-		12A3BFA423ED4133006D3947 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A3BFA223ED4133006D3947 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		12A3BFA623ED41C5006D3947 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3BFA523ED41C5006D3947 /* Security.framework */; };
 		7F12A75BFA0F017894AFCFE8 /* Pods_EZProxy_Safari.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FF54F66C1DC53D95B5C699 /* Pods_EZProxy_Safari.framework */; };
 		93FBF1DBDDC613E20E92249B /* Pods_EZProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15D4419F0B54359AB083459 /* Pods_EZProxy.framework */; };
@@ -66,10 +65,7 @@
 		121BC19721509A5D00BD885B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AppIconPurple.pdf; sourceTree = "<group>"; };
-		12A3BFA223ED4133006D3947 /* PFMoveApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PFMoveApplication.m; path = ../Pods/LetsMove/PFMoveApplication.m; sourceTree = "<group>"; };
-		12A3BFA323ED4133006D3947 /* PFMoveApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PFMoveApplication.h; path = ../Pods/LetsMove/PFMoveApplication.h; sourceTree = "<group>"; };
 		12A3BFA523ED41C5006D3947 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		12A3BFAB23ED4687006D3947 /* EZProxy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZProxy-Bridging-Header.h"; sourceTree = "<group>"; };
 		12AF1D5DD98FC19D749477B1 /* Pods-EZProxy Safari.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy Safari.release.xcconfig"; path = "Target Support Files/Pods-EZProxy Safari/Pods-EZProxy Safari.release.xcconfig"; sourceTree = "<group>"; };
 		12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZProxy.entitlements; sourceTree = "<group>"; };
 		12C4AC3B2150AA3F0003B476 /* EZProxy Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EZProxy Safari.entitlements"; sourceTree = "<group>"; };
@@ -125,9 +121,6 @@
 		121BC17521509A3800BD885B /* EZProxy */ = {
 			isa = PBXGroup;
 			children = (
-				12A3BFA323ED4133006D3947 /* PFMoveApplication.h */,
-				12A3BFA223ED4133006D3947 /* PFMoveApplication.m */,
-				12A3BFAB23ED4687006D3947 /* EZProxy-Bridging-Header.h */,
 				12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */,
 				121BC17621509A3800BD885B /* AppDelegate.swift */,
 				121BC17821509A3800BD885B /* ViewController.swift */,
@@ -361,7 +354,6 @@
 			files = (
 				121BC17921509A3800BD885B /* ViewController.swift in Sources */,
 				121BC17721509A3800BD885B /* AppDelegate.swift in Sources */,
-				12A3BFA423ED4133006D3947 /* PFMoveApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,14 +521,15 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = EZProxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2020.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 2020.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EZProxy/EZProxy-Bridging-Header.h";
@@ -554,14 +547,15 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = EZProxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2020.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 2020.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EZProxy/EZProxy-Bridging-Header.h";
@@ -576,7 +570,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -584,7 +578,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2020.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 2020.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -599,7 +594,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,7 +602,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2020.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 2020.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
