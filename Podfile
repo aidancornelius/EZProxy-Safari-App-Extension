@@ -6,9 +6,6 @@ target 'EZProxy' do
   use_frameworks!
 
   # Pods for EZProxy
-
-  pod 'Sparkle'
-  # pod 'LetsMove' – removed not functional in sandbox
 end
 
 target 'EZProxy Safari' do

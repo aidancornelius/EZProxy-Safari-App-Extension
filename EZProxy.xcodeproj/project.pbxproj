@@ -180,7 +180,6 @@
 				121BC17021509A3800BD885B /* Frameworks */,
 				121BC17121509A3800BD885B /* Resources */,
 				121BC1A221509A5D00BD885B /* Embed App Extensions */,
-				0DCC236F13D5A5DF1BAE0BF2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,23 +283,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DCC236F13D5A5DF1BAE0BF2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EZProxy/Pods-EZProxy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EZProxy/Pods-EZProxy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EZProxy/Pods-EZProxy-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2360D9C88C35480803BB8BAC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

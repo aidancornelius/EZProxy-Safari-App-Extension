@@ -15,6 +15,16 @@ class ViewController: NSViewController {
     @IBOutlet weak var tabCloseBehaviour: NSSegmentedControl!
     @IBOutlet weak var useSSLBehaviour: NSButton!
     
+    // adapted from https://stackoverflow.com/a/29433631
+    func alertDialog(question: String, text: String) -> Bool {
+        let alert = NSAlert()
+        alert.messageText = question
+        alert.informativeText = text
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "Okay")
+        return alert.runModal() == .alertFirstButtonReturn
+    }
+    
     func createPlistForDataStorage() {
         let fileManager = FileManager.default
         
@@ -161,9 +171,12 @@ class ViewController: NSViewController {
     }
     
     @IBAction func safariButtonPressed(_ sender: Any) {
-        NSWorkspace.shared.open(
-            URL(string:"https://github.com/aidancornelius/EZProxy-Safari-App-Extension")!
-        )
+        // Suggestion from https://github.com/aidancornelius/EZProxy-Safari-App-Extension/issues/3#issue-588910444
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.cornelius-bell.EZProxy.EZProxy-Safari") {
+            error in if let _ = error {
+                _ = self.alertDialog(question: "Preference Error", text: "An error occured opening preferences in Safari. Please launch Safari and go to Preferences > Extensions.")
+            }
+        }
     }
     
     override func viewWillAppear() {
