@@ -16,12 +16,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C89D8222DFF9EC47E87CAB2932D1133 /* Pods_EZProxy_Safari.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EZProxy_Safari.framework; path = "Pods-EZProxy Safari.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C89D8222DFF9EC47E87CAB2932D1133 /* Pods_EZProxy_Safari.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZProxy_Safari.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4391E1FA5DC52F2CB9CEAB51B706BF08 /* Pods-EZProxy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EZProxy-acknowledgements.plist"; sourceTree = "<group>"; };
 		6EA9B111D7D577D6DFB93BE5B4A38CB5 /* Pods-EZProxy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EZProxy.modulemap"; sourceTree = "<group>"; };
 		8FAE5A53867EAE682CBB1EE2C33FA8F8 /* Pods-EZProxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EZProxy.debug.xcconfig"; sourceTree = "<group>"; };
 		9BAD36BB989E49C06CFA5D79B0AF983D /* Pods-EZProxy Safari.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EZProxy Safari.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4266E2903A78BDC30CE79D518A2AF2B /* Pods-EZProxy Safari.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EZProxy Safari.release.xcconfig"; sourceTree = "<group>"; };
 		A4866F22A0A29495B78164CCCC0DFFB3 /* Pods-EZProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EZProxy.release.xcconfig"; sourceTree = "<group>"; };
 		B310B16783DFDC6A8C9BECFF08165198 /* Pods-EZProxy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EZProxy-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		F10E20A78713BE4D3BE597297F7286FA /* Pods-EZProxy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EZProxy-dummy.m"; sourceTree = "<group>"; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		F991D06EE489C2F75DD925069C0C8AF2 /* Pods-EZProxy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EZProxy-Info.plist"; sourceTree = "<group>"; };
-		FCD0B6CDEF8C87CA30838F2AC03C0B36 /* Pods_EZProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EZProxy.framework; path = "Pods-EZProxy.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD0B6CDEF8C87CA30838F2AC03C0B36 /* Pods_EZProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +199,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -262,7 +262,6 @@
 			baseConfigurationReference = A4866F22A0A29495B78164CCCC0DFFB3 /* Pods-EZProxy.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -366,7 +365,6 @@
 			baseConfigurationReference = A4266E2903A78BDC30CE79D518A2AF2B /* Pods-EZProxy Safari.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -406,7 +404,6 @@
 			baseConfigurationReference = 9BAD36BB989E49C06CFA5D79B0AF983D /* Pods-EZProxy Safari.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -446,7 +443,6 @@
 			baseConfigurationReference = 8FAE5A53867EAE682CBB1EE2C33FA8F8 /* Pods-EZProxy.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

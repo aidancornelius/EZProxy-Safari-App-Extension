@@ -9,6 +9,4 @@
 #ifndef EZProxy_Bridging_Header_h
 #define EZProxy_Bridging_Header_h
 
-#import "PFMoveApplication.h"
-
 #endif /* EZProxy_Bridging_Header_h */
