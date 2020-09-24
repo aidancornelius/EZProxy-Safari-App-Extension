@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SafariServices
 
 class ViewController: NSViewController {
 
