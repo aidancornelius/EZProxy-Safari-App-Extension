@@ -28,7 +28,7 @@ class ViewController: NSViewController {
     func createPlistForDataStorage() {
         let fileManager = FileManager.default
         
-        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist")
+        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "HK6R36PLNR.com.cornelius-bell")?.appendingPathComponent("HK6R36PLNR.com.cornelius-bell.EZProxySettings.plist")
         
         if(!fileManager.fileExists(atPath: url!.path)){
             let data : [String: Any] = [
@@ -37,7 +37,7 @@ class ViewController: NSViewController {
                 "useSSL": false,
             ]
 
-            if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell") {
+            if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "HK6R36PLNR.com.cornelius-bell") {
                 let newDirectory = directory.appendingPathComponent("Backups")
                 try? fileManager.createDirectory(at: newDirectory, withIntermediateDirectories: false, attributes: nil)
             }
@@ -59,7 +59,7 @@ class ViewController: NSViewController {
         
         let fileManager = FileManager.default
         
-        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist")
+        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "HK6R36PLNR.com.cornelius-bell")?.appendingPathComponent("HK6R36PLNR.com.cornelius-bell.EZProxySettings.plist")
         
         let plistXML = fileManager.contents(atPath: url!.path)
         
@@ -81,7 +81,7 @@ class ViewController: NSViewController {
     func writeToPlist( data : [String: Any] ) ->Bool{
         let fileManager = FileManager.default
         
-        let url = (fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist"))!
+        let url = (fileManager.containerURL(forSecurityApplicationGroupIdentifier: "HK6R36PLNR.com.cornelius-bell")?.appendingPathComponent("HK6R36PLNR.com.cornelius-bell.EZProxySettings.plist"))!
         let someData = NSDictionary(dictionary: data)
         do {
             let isWritten = try someData.write(to: url)

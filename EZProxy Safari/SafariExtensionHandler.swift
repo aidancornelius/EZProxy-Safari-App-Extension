@@ -14,7 +14,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 
         let fileManager = FileManager.default
         
-        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.cornelius-bell")?.appendingPathComponent("com.cornelius-bell.EZProxySettings.plist")
+        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "HK6R36PLNR.com.cornelius-bell")?.appendingPathComponent("HK6R36PLNR.com.cornelius-bell.EZProxySettings.plist")
         
         let plistXML = fileManager.contents(atPath: url!.path)
         

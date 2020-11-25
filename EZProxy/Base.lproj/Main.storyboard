@@ -23,13 +23,6 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Check for Updates..." id="c4P-v6-oDR">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="checkForUpdates:" target="zrm-Md-4xl" id="2Vb-nY-c3q"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="9ae-l9-sVk"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
@@ -65,6 +58,12 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
+                                        <menuItem title="New window" keyEquivalent="," id="yxb-cy-r1e">
+                                            <connections>
+                                                <segue destination="B8D-0N-5wS" kind="show" id="vtF-UU-BD2"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="aln-xZ-nH4"/>
                                         <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                             <connections>
                                                 <action selector="performClose:" target="Ady-hI-5gd" id="HmO-Ls-i7Q"/>
@@ -306,7 +305,7 @@
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Advanced" identifier="" id="ME8-0x-C0d">
-                                        <view key="view" ambiguous="YES" id="rXQ-VF-dqc">
+                                        <view key="view" id="rXQ-VF-dqc">
                                             <rect key="frame" x="10" y="33" width="451" height="197"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
