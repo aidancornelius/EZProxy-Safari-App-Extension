@@ -137,16 +137,32 @@ class ViewController: NSViewController {
         }
     }
     
+    /* Debugging states of the checkbox and the plist 
+    @IBAction func updateUseSSLButton(_ sender: Any) {
+        let a = String(useSSLBehaviour.state.rawValue)
+        let b = getDataFromPlist( theKey: "useSSL" )
+        
+        let states = "\(a) \(b)"
+        
+        alertDialog(question: "Does this seem right?", text: states)
+    } */
+    
     func updateUseSSLSettings() {
         if ( getDataFromPlist( theKey: "useSSL" ) as! Bool == true) {
-            
+            // it is 'true' let's make the button the same
+            if useSSLBehaviour.state.rawValue == 0 {
+                useSSLBehaviour.setNextState()
+            }
         } else {
-            useSSLBehaviour.setNextState()
+            // it is 'false' let's make the button the same
+            if useSSLBehaviour.state.rawValue == 1 {
+                useSSLBehaviour.setNextState()
+            }
         }
     }
     
     @IBAction func useSSLClicked(_ sender: Any) {
-        if (useSSLBehaviour!.state == NSControl.StateValue(rawValue: 0)) {
+        if (useSSLBehaviour.state.rawValue == 1) {
             _ = writeSettings(useSSL: true)
         } else {
             _ = writeSettings(useSSL: false)
