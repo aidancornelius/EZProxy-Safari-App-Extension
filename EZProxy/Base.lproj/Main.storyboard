@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -325,7 +325,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" id="zdp-fI-bga">
                                                         <font key="font" metaFont="system"/>
-                                                        <string key="title">This setting uses https://{u-r-l}.{proxy}.{proxy}/login?... take care with this setting as most university libraries do not properly enable root certificates for SSL transit.</string>
+                                                        <string key="title">This setting uses https://{original-url}.{proxy}.{domain}/login?... take care with this setting as most university libraries do not properly enable root certificates for SSL transit.</string>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>

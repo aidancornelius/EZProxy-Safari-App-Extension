@@ -505,7 +505,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EZProxy/Info.plist;
@@ -514,7 +514,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2020.11;
+				MARKETING_VERSION = 2022.02;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -533,7 +533,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EZProxy/Info.plist;
@@ -542,7 +542,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2020.11;
+				MARKETING_VERSION = 2022.02;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -558,7 +558,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
@@ -568,7 +568,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2020.11;
+				MARKETING_VERSION = 2022.02;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -584,7 +584,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
@@ -594,7 +594,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2020.11;
+				MARKETING_VERSION = 2022.02;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

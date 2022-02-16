@@ -3,11 +3,11 @@ An App Extension port of the EZProxy Safari Extension for Safari 12+
 
 This is a Safari App Extension that allows users to access academic journals through their institutions EZProxy service.
 
-## Prebuilt
+## Ready-made version
 
-If you have no idea what this stuff is, and just want the extension, use the releases tab to download a ready made version.
+If you have no idea what this stuff is, and just want the extension, use the link below to download a ready made version.
 
-[Download](https://github.com/aidancornelius/EZProxy-Safari-App-Extension/releases)
+[Download](https://store.schemist.com.au/l/ezproxy)
 
 ## Installing
 
@@ -25,7 +25,7 @@ By default the button, if enabled, without setting a proxy URL will point to a n
 
 Contact me, or make an issue / pull request. :-)
 
-aidan.cornelius-bell@flinders.edu.au
+ac@schemist.com.au
 
 ## License
 
