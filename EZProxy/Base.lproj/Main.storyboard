@@ -301,6 +301,20 @@
                                                         <action selector="updateProxyClicked:" target="XfG-lQ-9wD" id="CVj-iO-vGO"/>
                                                     </connections>
                                                 </button>
+                                                <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdP-Vc-4m8">
+                                                    <rect key="frame" x="339" y="178" width="96" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <levelIndicatorCell key="cell" alignment="left" maxValue="1" warningValue="2" criticalValue="3" id="wBt-aT-GQB"/>
+                                                </levelIndicator>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDv-Qg-anP">
+                                                    <rect key="frame" x="242" y="180" width="91" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Configuration:" id="hvo-ZD-t7U">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
                                             </subviews>
                                         </view>
                                     </tabViewItem>
@@ -358,6 +372,8 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="configurationIndicator" destination="mdP-Vc-4m8" id="Mb3-Jc-zWw"/>
+                        <outlet property="configurationText" destination="lDv-Qg-anP" id="zjT-6j-WPC"/>
                         <outlet property="proxyUpdateField" destination="xdA-Xa-DVo" id="tls-Al-ulP"/>
                         <outlet property="tabCloseBehaviour" destination="MVL-me-pKC" id="sVv-e1-3CG"/>
                         <outlet property="useSSLBehaviour" destination="sja-T0-W86" id="yvt-2h-ubU"/>

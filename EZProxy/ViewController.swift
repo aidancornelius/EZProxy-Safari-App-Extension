@@ -14,6 +14,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var proxyUpdateField: NSTextField!
     @IBOutlet weak var tabCloseBehaviour: NSSegmentedControl!
     @IBOutlet weak var useSSLBehaviour: NSButton!
+    @IBOutlet weak var configurationIndicator: NSLevelIndicator!
+    @IBOutlet weak var configurationText: NSTextField!
     
     // adapted from https://stackoverflow.com/a/29433631
     func alertDialog(question: String, text: String) -> Bool {
@@ -172,7 +174,39 @@ class ViewController: NSViewController {
     @IBAction func updateProxyClicked(_ sender: Any) {
         NSLog("I have been asked to set the proxy URL to: " + proxyUpdateField.stringValue)
         
-        _ = writeSettings(proxyBase: proxyUpdateField.stringValue)
+        configurationIndicator.isHidden = false
+        configurationText.isHidden = false
+        
+        let adjustments = [
+            (pattern: "\\s*(\\.\\.\\.|\\.|,)\\s*", replacement: "$1"), // elipsis or period or comma has trailing space
+            (pattern: "\\s*'\\s*", replacement: "'"), // apostrophe has no extra space
+            (pattern: "^\\s+|\\s+$", replacement: ""), // remove leading or trailing space
+            (pattern: "^(http|https)://", replacement: ""),
+        ]
+        
+        let mutableString = NSMutableString(string: proxyUpdateField.stringValue)
+        
+        for (pattern, replacement) in adjustments {
+            let re = try! NSRegularExpression(pattern: pattern)
+            re.replaceMatches(in: mutableString,
+                              options: [],
+                              range: NSRange(location: 0, length: mutableString.length),
+                              withTemplate: replacement)
+        }
+        
+        let regString = String(mutableString)
+        
+        let regmatchUrl = #"[a-zA-Z]\w*(\.\w+)+(/\w*(\.\w+)*)*(\?.+)*\/"#
+        let result = regString.range(of: regmatchUrl, options: .regularExpression)
+        if result != nil {
+            configurationIndicator.integerValue = 3
+        } else {
+            configurationIndicator.integerValue = 1
+        }
+        
+        proxyUpdateField.stringValue = regString
+        
+        _ = writeSettings(proxyBase: regString)
     }
     
     @IBAction func tabCloseBehaviourDidChange(_ sender: Any) {
@@ -205,6 +239,8 @@ class ViewController: NSViewController {
         proxyUpdateField.stringValue = readProxySettings()
         updateKeepTabSettings()
         updateUseSSLSettings()
+        configurationIndicator.isHidden = true
+        configurationText.isHidden = true
     }
 
     override var representedObject: Any? {
