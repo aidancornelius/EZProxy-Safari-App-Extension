@@ -21,6 +21,7 @@
 		121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
 		129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */; };
 		12A3BFA623ED41C5006D3947 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3BFA523ED41C5006D3947 /* Security.framework */; };
+		12C402DA2806AC1500EC3411 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 12C402D92806AC1500EC3411 /* Credits.rtf */; };
 		12FF0E4B252987F600F9D2A3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF0E4A252987F600F9D2A3 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AppIconPurple.pdf; sourceTree = "<group>"; };
 		12A3BFA523ED41C5006D3947 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		12AF1D5DD98FC19D749477B1 /* Pods-EZProxy Safari.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy Safari.release.xcconfig"; path = "Target Support Files/Pods-EZProxy Safari/Pods-EZProxy Safari.release.xcconfig"; sourceTree = "<group>"; };
+		12C402D92806AC1500EC3411 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZProxy.entitlements; sourceTree = "<group>"; };
 		12C4AC3B2150AA3F0003B476 /* EZProxy Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EZProxy Safari.entitlements"; sourceTree = "<group>"; };
 		12FF0E4A252987F600F9D2A3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 				121BC17C21509A3C00BD885B /* Main.storyboard */,
 				129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */,
 				121BC17F21509A3C00BD885B /* Info.plist */,
+				12C402D92806AC1500EC3411 /* Credits.rtf */,
 			);
 			path = EZProxy;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C402DA2806AC1500EC3411 /* Credits.rtf in Resources */,
 				121BC17B21509A3C00BD885B /* Assets.xcassets in Resources */,
 				121BC17E21509A3C00BD885B /* Main.storyboard in Resources */,
 				121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */,
