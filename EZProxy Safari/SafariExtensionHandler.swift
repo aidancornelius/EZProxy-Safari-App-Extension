@@ -60,7 +60,13 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                         
                         let newURLString = ssl + libproxy + "/login?url=http://" + host! + path!
                         
-                        let completeLibProxURL = URL(string: newURLString)
+                        var completeLibProxURL = URL(string: newURLString)
+                        
+                        if self.getDataFromPlist(theKey: "useOpenAthens") as! Bool {
+                            // using OpenAthens to jump...
+                            let oabase = "https://go.openathens.net/redirector/" + libproxy + "?url=http://" + host!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! + path!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                            completeLibProxURL = URL(string: oabase)
+                        }
                         
                         // Now running the tab open earlier (not making it active)
                         if self.getDataFromPlist( theKey: "keepTab" ) as! Bool == false {

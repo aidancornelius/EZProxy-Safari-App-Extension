@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -275,7 +275,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" id="cJG-Lc-60A">
                                                         <font key="font" metaFont="system"/>
-                                                        <string key="title">This URL is provided by your institution, check with them for details. Do not include the http://, https:// or anything following the URL.</string>
+                                                        <string key="title">This domain is provided by your institution, check with them for details. Do not include http://, https:// or anything following the URL.</string>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -336,7 +336,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQY-r1-TYI">
-                                                    <rect key="frame" x="34" y="83" width="396" height="83"/>
+                                                    <rect key="frame" x="34" y="108" width="396" height="58"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" id="zdp-fI-bga">
                                                         <font key="font" metaFont="system"/>
@@ -345,6 +345,27 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78i-vR-meL">
+                                                    <rect key="frame" x="34" y="17" width="396" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <textFieldCell key="cell" id="xCs-wB-1FI">
+                                                        <font key="font" metaFont="system"/>
+                                                        <string key="title">This setting uses https://go.openathens.net/redirector/{oaidentifier}?url={original-url} for access to proxied resources through an OpenAthens. Negates SSL setting above. </string>
+                                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9m-Ka-tjx">
+                                                    <rect key="frame" x="15" y="83" width="197" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="My library uses OpenAthens" bezelStyle="regularSquare" imagePosition="left" inset="2" id="sFD-ao-eq8">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="updateUseOpenAthens:" target="XfG-lQ-9wD" id="q7c-kk-lsj"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                     </tabViewItem>
@@ -375,6 +396,8 @@
                     <connections>
                         <outlet property="configurationIndicator" destination="mdP-Vc-4m8" id="Mb3-Jc-zWw"/>
                         <outlet property="configurationText" destination="lDv-Qg-anP" id="zjT-6j-WPC"/>
+                        <outlet property="descriptionForProxyURL" destination="cJG-Lc-60A" id="L9i-Vi-X9J"/>
+                        <outlet property="openAthens" destination="j9m-Ka-tjx" id="Lzo-L7-QzS"/>
                         <outlet property="proxyUpdateField" destination="xdA-Xa-DVo" id="tls-Al-ulP"/>
                         <outlet property="tabCloseBehaviour" destination="MVL-me-pKC" id="sVv-e1-3CG"/>
                         <outlet property="useSSLBehaviour" destination="sja-T0-W86" id="yvt-2h-ubU"/>

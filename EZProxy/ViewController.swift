@@ -16,6 +16,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var useSSLBehaviour: NSButton!
     @IBOutlet weak var configurationIndicator: NSLevelIndicator!
     @IBOutlet weak var configurationText: NSTextField!
+    @IBOutlet weak var openAthens: NSButton!
+    
+    @IBOutlet weak var descriptionForProxyURL: NSTextFieldCell!
     
     // adapted from https://stackoverflow.com/a/29433631
     func alertDialog(question: String, text: String) -> Bool {
@@ -34,9 +37,10 @@ class ViewController: NSViewController {
         
         if(!fileManager.fileExists(atPath: url!.path)){
             let data : [String: Any] = [
-                "proxyBase": "ezproxy.flinders.edu.au",
+                "proxyBase": "proxy.slsa.sa.gov.au",
                 "keepTab": true,
                 "useSSL": false,
+                "useOpenAthens": false
             ]
 
             if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "HK6R36PLNR.com.cornelius-bell") {
@@ -95,10 +99,11 @@ class ViewController: NSViewController {
         }
     }
     
-    func writeSettings( proxyBase: String? = nil, keepTab: Bool? = nil, useSSL: Bool? = nil ) ->Bool {
+    func writeSettings( proxyBase: String? = nil, keepTab: Bool? = nil, useSSL: Bool? = nil, useOpenAthens: Bool? = nil) ->Bool {
         var newProxyBase = ""
         var newKeepTab = false
         var newUseSSL = false
+        var newUseOpenAthens = false
         
         if (proxyBase != nil) {
             newProxyBase = proxyBase!
@@ -115,11 +120,18 @@ class ViewController: NSViewController {
         } else {
             newUseSSL = getDataFromPlist(theKey: "useSSL") as! Bool
         }
+        if (useOpenAthens != nil) {
+            newUseOpenAthens = useOpenAthens!
+        } else {
+            newUseOpenAthens = getDataFromPlist(theKey: "useOpenAthens") as! Bool
+        }
         
         let data : [String: Any] =
             ["proxyBase": newProxyBase,
              "keepTab": newKeepTab,
-             "useSSL": newUseSSL,]
+             "useSSL": newUseSSL,
+             "useOpenAthens": newUseOpenAthens,
+            ]
         return writeToPlist(data: data)
     }
     
@@ -151,17 +163,42 @@ class ViewController: NSViewController {
     
     func updateUseSSLSettings() {
         if ( getDataFromPlist( theKey: "useSSL" ) as! Bool == true) {
-            // it is 'true' let's make the button the same
+            // it is 'false' let's make the button the same
             if useSSLBehaviour.state.rawValue == 0 {
                 useSSLBehaviour.setNextState()
             }
         } else {
-            // it is 'false' let's make the button the same
+            // it is 'true' let's make the button the same
             if useSSLBehaviour.state.rawValue == 1 {
                 useSSLBehaviour.setNextState()
             }
         }
     }
+    
+    func updateUseOpenAthens() {
+        if ( getDataFromPlist(theKey: "useOpenAthens") as! Bool == true) {
+            // it's true, update our button
+            if openAthens.state.rawValue == 0 {
+                openAthens.setNextState()
+                descriptionForProxyURL.stringValue = "You have selected OpenAthens as the proxy provider. Enter your OA identifier (typically the same as the main domain something.edu)."
+            } else {
+                // Okay, so its false!
+                if openAthens.state.rawValue == 1 {
+                    openAthens.setNextState()
+                }
+            }
+        }
+    }
+    
+    /* Are we using OpenAthens? Let's do some work here... */
+    @IBAction func updateUseOpenAthens(_ sender: Any) {
+        if (openAthens.state.rawValue == 1) {
+            _ = writeSettings(useOpenAthens: true)
+        } else {
+            _ = writeSettings(useOpenAthens: false)
+        }
+    }
+    
     
     @IBAction func useSSLClicked(_ sender: Any) {
         if (useSSLBehaviour.state.rawValue == 1) {
@@ -239,6 +276,7 @@ class ViewController: NSViewController {
         proxyUpdateField.stringValue = readProxySettings()
         updateKeepTabSettings()
         updateUseSSLSettings()
+        updateUseOpenAthens()
         configurationIndicator.isHidden = true
         configurationText.isHidden = true
     }
