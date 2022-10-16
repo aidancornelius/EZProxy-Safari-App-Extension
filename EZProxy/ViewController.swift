@@ -9,6 +9,8 @@
 import Cocoa
 import SafariServices
 
+extension String: Error {}
+
 class ViewController: NSViewController {
 
     @IBOutlet weak var proxyUpdateField: NSTextField!
@@ -151,6 +153,16 @@ class ViewController: NSViewController {
         }
     }
     
+    func upgradePlistTasks() -> Bool {
+        // add the oA property if it's missing then do whatever else
+        if writeSettings(useOpenAthens: false) {
+            return true;
+        } else {
+            return false;
+        }
+        // Any subsequent new plist items can go here...
+    }
+    
     /* Debugging states of the checkbox and the plist 
     @IBAction func updateUseSSLButton(_ sender: Any) {
         let a = String(useSSLBehaviour.state.rawValue)
@@ -176,17 +188,24 @@ class ViewController: NSViewController {
     }
     
     func updateUseOpenAthens() {
-        if ( getDataFromPlist(theKey: "useOpenAthens") as! Bool == true) {
-            // it's true, update our button
-            if openAthens.state.rawValue == 0 {
-                openAthens.setNextState()
-                descriptionForProxyURL.stringValue = "You have selected OpenAthens as the proxy provider. Enter your OA identifier (typically the same as the main domain something.edu)."
-            } else {
-                // Okay, so its false!
-                if openAthens.state.rawValue == 1 {
+        do {
+            guard let useOpenAthens = getDataFromPlist(theKey: "useOpenAthens") as? Bool else {
+                throw "There may not be an oA key in the plist?"
+            }
+            if ( useOpenAthens as! Bool == true) {
+                // it's true, update our button
+                if openAthens.state.rawValue == 0 {
                     openAthens.setNextState()
+                    descriptionForProxyURL.stringValue = "You have selected OpenAthens as the proxy provider. Enter your OA identifier (typically the same as the main domain something.edu)."
+                } else {
+                    // Okay, so its false!
+                    if openAthens.state.rawValue == 1 {
+                        openAthens.setNextState()
+                    }
                 }
             }
+        } catch {
+            upgradePlistTasks()
         }
     }
     
