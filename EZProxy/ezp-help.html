@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EZProxy help and general guidance</title>
+	<style type="text/css">
+		<!-- 
+		body {
+          background: #ECECE8;
+		  margin: 8px 8px;
+		  font-family: system-ui, -apple-system, "Noto Color Emoji", sans-serif;
+		  font-size: 1rem;
+		  -webkit-text-size-adjust: 100%;
+		  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		h1,h2,h3,h4,h5 {
+			margin: 0;
+		}
+		code {
+		  font-size: 0.875em;
+		  color: #d63384;
+		  word-wrap: break-word;
+		}
+		-->
+	</style>
+  </head>
+  <body>
+	<h1>Help for EZProxy</h1>
+	<p>Thank you for purchasing the EZProxy extension for Safari. This short help section provides a high level overview of the settings and details you will need to configure the extension correctly.</p>
+	<h3>1. EZProxy configuration using OCLC's EZProxy (most common)</h3>
+	<p>Many major universities, colleges and public institutions use OCLC's EZProxy to provide off-campus access to journals, book chapters, and more. To configure the EZProxy using this service you'll just need an access 'domain' from your institution.</p>
+	<p>Typically these configuration domains will look like:</p>
+	<ul>
+		<li><code>access.library.unisa.edu.au</code></li>
+		<li><code>proxy.library.adelaide.edu.au</code></li>
+		<li><code>ezproxy.library.sydney.edu.au</code></li>
+		<li><code>ezproxy.deakin.edu.au</code></li>
+		<li><code>ezproxy.waikato.ac.nz</code></li>
+		<li><code>ezproxy.lib.cam.ac.uk:2048</code></li>
+	</ul>
+	<p>Recommended settings for EZProxy services are already set and ready to go when you download the app. All you need to do is provide the domain name (i.e. like the examples above). If you think you've changed something by accident, the 'advanced' tab in the app should have <em>neither</em> box checked.</p> 
+	<p>Some institutions may support or <em>require</em> SSL for proxy requests. Usually, the URL will look something like: <code>https://ezproxy.library.institution.edu/</code>. In these instances you'll need to turn on SSL in the advanced settings in the app. Go to the Advanced tab and check the top checkbox.This is not standard practice, but may be a technical requirement so if you're having trouble try this option.</p>
+	<p><strong>Remember</strong>: your library proxy URL should <em>never</em> include the <code>http://</code> or <code>https://</code> <em>or</em> anything following the URL, i.e. <code>/access?=</code></p>
+	<h3>2. EZproxy configuration using OpenAthens Access Anywhere</h3>
+	<p>Some institutions have begun to move to OpenAthens' services for proxying requests to journals. In some instances these co-exist with hosted EZProxy provisions, in other cases OpenAthens completely replaces EZProxy. If your institution is following the latter, you'll need to provide your institution's OpenAthens identifier and check the My library uses OpenAthens box in the Advanced tab.</p>
+	<p>OpenAthens identifiers are relatively simple and usually are just your institutions "TLD" or main domain name, for example:</p>
+	<ul>
+		<li><code>unimelb.edu.au</code></li>
+		<li><code>unisa.edu.au</code></li>
+		<li><code>www.monash.edu</code></li>
+	</ul>
+	<p>There are some libraries which use <code>library.domain.edu</code> as the identifier. If in doubt, search your library's help guides on off-campus access or try entering your institution's domain name. OpenAthens can also automatically resolve some domain names if you're unsure.</p>
+	<h3>3. All set?</h3>
+    <p>Once you're happy with the configuration you'll need to enable the extension in Safari. From main window (close this help guide) click the "Open Safari Preferences" button at the top left of the window. Safari should open and the Settings will appear, go to the "Extensions" tab and click the checkbox next to EZProxy Button. You will likely receive a notice about the app being able to "read any website", this is to enable the button's functionality. This app has been purpose built so that no data, telemetary or details about you <em>ever</em> leave your device. Anything you visit or do is entirely private and is not recorded by this app.</p>
+    <p>If you have any privacy concerns, you are welcome to examine the completely open source code for this app and raise any issues or security concerns there. For information, open the "About EZProxy" window from this app.</p>
+    <h3>4. Having trouble?</h3>
+	<p>If you can't make things work, please don't hesitate to get in touch. Sometimes two heads are better than one. You are welcome to contact me for support via: <code>ac@schemist.com.au</code> (I'm Aidan, by the way, good to meet you. I'm an academic by day and develop this app in my spare time to help researchers and students just like you.)</p>
+	<p>Thanks again for purchasing this app. I hope it makes your off-campus research and learning easier.</p>
+  </body>
+</html>

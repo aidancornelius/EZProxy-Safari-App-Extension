@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="21507"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -155,11 +156,45 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--Help View Controller-->
+        <scene sceneID="5Bq-ic-ek1">
+            <objects>
+                <viewController id="Jvo-ow-atB" customClass="HelpViewController" customModule="EZProxy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="mBH-k9-i0h">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="500"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzr-3Y-bey">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="500"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                                <connections>
+                                    <outlet property="UIDelegate" destination="Jvo-ow-atB" id="GqL-W2-AXS"/>
+                                </connections>
+                            </wkWebView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tzr-3Y-bey" firstAttribute="leading" secondItem="mBH-k9-i0h" secondAttribute="leading" id="9MJ-w1-ZSm"/>
+                            <constraint firstAttribute="trailing" secondItem="tzr-3Y-bey" secondAttribute="trailing" id="aWZ-fw-NUp"/>
+                            <constraint firstItem="tzr-3Y-bey" firstAttribute="top" secondItem="mBH-k9-i0h" secondAttribute="top" id="vSP-8i-WGk"/>
+                            <constraint firstAttribute="bottom" secondItem="tzr-3Y-bey" secondAttribute="bottom" id="xC2-6z-8ea"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="helpWebView" destination="tzr-3Y-bey" id="t7v-qw-bB8"/>
+                    </connections>
+                </viewController>
+                <customObject id="m9z-2I-cH1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="418"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="EZProxy for Safari" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                    <window key="window" title="Configuration for EZProxy" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -167,6 +202,30 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="500" height="480"/>
                         <value key="maxSize" type="size" width="500" height="480"/>
+                        <toolbar key="toolbar" implicitIdentifier="66B94278-065B-45A0-BD14-262257F83BD8" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="4IY-vg-TVI">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="QQ0-VX-gRf"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="LIm-1v-pvv"/>
+                                <toolbarItem implicitItemIdentifier="C9F8FD09-B28C-4365-AB32-70A9EC86AA70" label="Help" paletteLabel="Help" sizingBehavior="auto" id="icX-62-akx">
+                                    <nil key="toolTip"/>
+                                    <button key="view" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="nVS-Oo-1vU">
+                                        <rect key="frame" x="4" y="14" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oqt-kp-Tzt">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <segue destination="Jvo-ow-atB" kind="popover" popoverAnchorView="icX-62-akx" popoverBehavior="semitransient" preferredEdge="minY" id="Bmu-pJ-I0D"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="LIm-1v-pvv"/>
+                                <toolbarItem reference="icX-62-akx"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -191,35 +250,9 @@
                                 <rect key="frame" x="341" y="247" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="AppIconPurple" id="TG1-wX-O7c"/>
+                                <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-f7-VUp">
-                                <rect key="frame" x="33" y="346" width="71" height="17"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="To enable:" id="Isr-l1-kD6">
-                                    <font key="font" metaFont="systemBold"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LL6-YQ-MFA">
-                                <rect key="frame" x="34" y="321" width="76" height="17"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Open" id="wdE-s7-P7P">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnY-PP-oJH">
-                                <rect key="frame" x="21" y="363" width="248" height="24"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" title="Configuration for EZProxy Button" allowsEditingTextAttributes="YES" id="WpR-pJ-Izu">
-                                    <font key="font" metaFont="systemBold"/>
-                                    <color key="textColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYn-kr-jhu">
+                            <tabView fixedFrame="YES" initialItem="TkY-e4-hAm" translatesAutoresizingMaskIntoConstraints="NO" id="dYn-kr-jhu">
                                 <rect key="frame" x="16" y="2" width="471" height="243"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -232,7 +265,7 @@
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdA-Xa-DVo">
                                                     <rect key="frame" x="7" y="110" width="333" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="ezproxy.flinders.edu.au" drawsBackground="YES" id="Rvc-rw-0aN">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="ezproxy.library.sydney.edu.au" drawsBackground="YES" id="Rvc-rw-0aN">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -371,27 +404,52 @@
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-sQ-QFr">
-                                <rect key="frame" x="73" y="319" width="116" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="inline" title="Safari Preferences" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="A6M-E4-pRS">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="smallSystemBold"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="safariButtonPressed:" target="XfG-lQ-9wD" id="pXN-c2-fJx"/>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vi-9Qj">
-                                <rect key="frame" x="34" y="295" width="146" height="17"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Check the box, Maxine." id="9Qw-Ef-ZIj">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView focusRingType="none" distribution="fill" orientation="vertical" alignment="leading" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVP-aH-EjG">
+                                <rect key="frame" x="20" y="322" width="243" height="58"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-f7-VUp">
+                                        <rect key="frame" x="-2" y="42" width="71" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="To enable:" id="Isr-l1-kD6">
+                                            <font key="font" metaFont="systemBold"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-sQ-QFr">
+                                        <rect key="frame" x="0.0" y="20" width="143" height="18"/>
+                                        <buttonCell key="cell" type="inline" title="Open Safari Preferences" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="A6M-E4-pRS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="smallSystemBold"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="safariButtonPressed:" target="XfG-lQ-9wD" id="pXN-c2-fJx"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vi-9Qj">
+                                        <rect key="frame" x="-2" y="0.0" width="247" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Check the EZProxy Button in Extensions" id="9Qw-Ef-ZIj">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="HVP-aH-EjG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Rfd-74-drn"/>
+                            <constraint firstItem="HVP-aH-EjG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="odR-d9-Jy7"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="configurationIndicator" destination="mdP-Vc-4m8" id="Mb3-Jc-zWw"/>
@@ -405,7 +463,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="762"/>
+            <point key="canvasLocation" x="-229" y="913"/>
         </scene>
     </scenes>
     <resources>

@@ -205,6 +205,7 @@ class ViewController: NSViewController {
                 }
             }
         } catch {
+            // This calls to add the key for useOpenAthens FUTURE ITERATIONS: may need a variable to determine what to add? Incremental upgrades, and all that.
             upgradePlistTasks()
         }
     }

@@ -19,6 +19,8 @@
 		121BC19A21509A5D00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
 		121BC19E21509A5D00BD885B /* EZProxy Safari.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 121BC18A21509A5D00BD885B /* EZProxy Safari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
+		124A00A529517B1000C41C66 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124A00A429517B1000C41C66 /* HelpViewController.swift */; };
+		124A00A72951819900C41C66 /* ezp-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 124A00A62951819800C41C66 /* ezp-help.html */; };
 		129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */; };
 		12A3BFA623ED41C5006D3947 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3BFA523ED41C5006D3947 /* Security.framework */; };
 		12C402DA2806AC1500EC3411 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 12C402D92806AC1500EC3411 /* Credits.rtf */; };
@@ -64,6 +66,8 @@
 		121BC19621509A5D00BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		121BC19721509A5D00BD885B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		124A00A429517B1000C41C66 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		124A00A62951819800C41C66 /* ezp-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ezp-help.html"; sourceTree = "<group>"; };
 		129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AppIconPurple.pdf; sourceTree = "<group>"; };
 		12A3BFA523ED41C5006D3947 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		12AF1D5DD98FC19D749477B1 /* Pods-EZProxy Safari.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy Safari.release.xcconfig"; path = "Target Support Files/Pods-EZProxy Safari/Pods-EZProxy Safari.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		121BC17521509A3800BD885B /* EZProxy */ = {
 			isa = PBXGroup;
 			children = (
+				124A00A62951819800C41C66 /* ezp-help.html */,
 				12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */,
 				121BC17621509A3800BD885B /* AppDelegate.swift */,
 				121BC17821509A3800BD885B /* ViewController.swift */,
@@ -130,6 +135,7 @@
 				129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */,
 				121BC17F21509A3C00BD885B /* Info.plist */,
 				12C402D92806AC1500EC3411 /* Credits.rtf */,
+				124A00A429517B1000C41C66 /* HelpViewController.swift */,
 			);
 			path = EZProxy;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 				121BC17E21509A3C00BD885B /* Main.storyboard in Resources */,
 				121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */,
 				129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */,
+				124A00A72951819900C41C66 /* ezp-help.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				121BC17921509A3800BD885B /* ViewController.swift in Sources */,
+				124A00A529517B1000C41C66 /* HelpViewController.swift in Sources */,
 				121BC17721509A3800BD885B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +517,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EZProxy/Info.plist;
@@ -518,7 +526,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2022.10.1;
+				MARKETING_VERSION = 2022.12.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -537,7 +545,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EZProxy/Info.plist;
@@ -546,7 +554,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2022.10.1;
+				MARKETING_VERSION = 2022.12.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -562,7 +570,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
@@ -572,7 +580,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2022.10.1;
+				MARKETING_VERSION = 2022.12.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -588,7 +596,7 @@
 				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
@@ -598,7 +606,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2022.10.1;
+				MARKETING_VERSION = 2022.12.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
