@@ -6,6 +6,7 @@
 //  Copyright © 2018 Aidan Cornelius-Bell. All rights reserved.
 //
 
+import Foundation
 import Cocoa
 import SafariServices
 
@@ -16,11 +17,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var proxyUpdateField: NSTextField!
     @IBOutlet weak var tabCloseBehaviour: NSSegmentedControl!
     @IBOutlet weak var useSSLBehaviour: NSButton!
-    @IBOutlet weak var configurationIndicator: NSLevelIndicator!
-    @IBOutlet weak var configurationText: NSTextField!
     @IBOutlet weak var openAthens: NSButton!
-    
     @IBOutlet weak var descriptionForProxyURL: NSTextFieldCell!
+    @IBOutlet weak var settingsOkay: NSTextField!
     
     // adapted from https://stackoverflow.com/a/29433631
     func alertDialog(question: String, text: String) -> Bool {
@@ -163,16 +162,6 @@ class ViewController: NSViewController {
         // Any subsequent new plist items can go here...
     }
     
-    /* Debugging states of the checkbox and the plist 
-    @IBAction func updateUseSSLButton(_ sender: Any) {
-        let a = String(useSSLBehaviour.state.rawValue)
-        let b = getDataFromPlist( theKey: "useSSL" )
-        
-        let states = "\(a) \(b)"
-        
-        alertDialog(question: "Does this seem right?", text: states)
-    } */
-    
     func updateUseSSLSettings() {
         if ( getDataFromPlist( theKey: "useSSL" ) as! Bool == true) {
             // it is 'false' let's make the button the same
@@ -196,7 +185,6 @@ class ViewController: NSViewController {
                 // it's true, update our button
                 if openAthens.state.rawValue == 0 {
                     openAthens.setNextState()
-                    descriptionForProxyURL.stringValue = "You have selected OpenAthens as the proxy provider. Enter your OA identifier (typically the same as the main domain something.edu)."
                 } else {
                     // Okay, so its false!
                     if openAthens.state.rawValue == 1 {
@@ -228,42 +216,73 @@ class ViewController: NSViewController {
         }
     }
     
+    func isValidDomain(_ domain: String) -> Bool {
+        // Regex pattern to match the domain name with optional port but no protocol or path
+        let pattern = "^(?!http:\\/\\/|https:\\/\\/)([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\\.)+[a-zA-Z]{2,}(\\:[0-9]+)?$"
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            let nsRange = NSRange(domain.startIndex..<domain.endIndex, in: domain)
+            let matches = regex.matches(in: domain, options: [], range: nsRange)
+            return matches.count > 0
+        } catch {
+            print(error)
+            return false
+        }
+    }
+    
+    func cleanURL(_ urlString: String) -> String {
+        // Pattern to find the protocol and capture the domain with optional port
+        let pattern = "^(?:https?:\\/\\/)?([^\\/\\?#]+)(?::(\\d+))?"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+            let range = NSRange(location: 0, length: urlString.utf16.count)
+            
+            if let match = regex.firstMatch(in: urlString, options: [], range: range) {
+                // Extract the domain and port from the URL
+                let domainRange = match.range(at: 1)
+                let portRange = match.range(at: 2)
+                
+                var cleanString = ""
+                
+                if let domainRange = Range(domainRange, in: urlString) {
+                    cleanString = String(urlString[domainRange])
+                }
+                
+                if let portRange = Range(portRange, in: urlString), !portRange.isEmpty {
+                    cleanString += ":" + String(urlString[portRange])
+                }
+                
+                return cleanString
+            }
+            
+            return urlString // If the regex doesn't match, return the original URL
+        } catch {
+            print("Invalid regex pattern: \(error.localizedDescription)")
+            return urlString
+        }
+    }
+
+    
     @IBAction func updateProxyClicked(_ sender: Any) {
-        NSLog("I have been asked to set the proxy URL to: " + proxyUpdateField.stringValue)
+        NSLog("I have been asked to set the proxy URL to: " + proxyUpdateField.stringValue + " ...")
         
-        configurationIndicator.isHidden = false
-        configurationText.isHidden = false
+        // Validate the domain first...
+        let result = isValidDomain(proxyUpdateField.stringValue)
+        // Clean the string anyway because users keep breaking this...
+        let proxyBaseString = cleanURL(proxyUpdateField.stringValue)
         
-        let adjustments = [
-            (pattern: "\\s*(\\.\\.\\.|\\.|,)\\s*", replacement: "$1"), // elipsis or period or comma has trailing space
-            (pattern: "\\s*'\\s*", replacement: "'"), // apostrophe has no extra space
-            (pattern: "^\\s+|\\s+$", replacement: ""), // remove leading or trailing space
-            (pattern: "^(http|https)://", replacement: ""),
-        ]
+        NSLog("... But I am setting it to: " + proxyUpdateField.stringValue + " – instead.")
         
-        let mutableString = NSMutableString(string: proxyUpdateField.stringValue)
-        
-        for (pattern, replacement) in adjustments {
-            let re = try! NSRegularExpression(pattern: pattern)
-            re.replaceMatches(in: mutableString,
-                              options: [],
-                              range: NSRange(location: 0, length: mutableString.length),
-                              withTemplate: replacement)
-        }
-        
-        let regString = String(mutableString)
-        
-        let regmatchUrl = #"[a-zA-Z]\w*(\.\w+)+(/\w*(\.\w+)*)*(\?.+)*\/"#
-        let result = regString.range(of: regmatchUrl, options: .regularExpression)
-        if result != nil {
-            configurationIndicator.integerValue = 3
+        if result == false {
+            _ = alertDialog(question: "Incorrect domain", text: "You asked to use " + proxyUpdateField.stringValue + " as the domain base but this is likely incorrect. I have automatically updated it to: " + proxyBaseString + ". You can tweak this in settings if needed.")
         } else {
-            configurationIndicator.integerValue = 1
+            settingsOkay.isHidden = false
         }
         
-        proxyUpdateField.stringValue = regString
+        proxyUpdateField.stringValue = proxyBaseString
         
-        _ = writeSettings(proxyBase: regString)
+        _ = writeSettings(proxyBase: proxyBaseString)
     }
     
     @IBAction func tabCloseBehaviourDidChange(_ sender: Any) {
@@ -297,8 +316,7 @@ class ViewController: NSViewController {
         updateKeepTabSettings()
         updateUseSSLSettings()
         updateUseOpenAthens()
-        configurationIndicator.isHidden = true
-        configurationText.isHidden = true
+        settingsOkay.isHidden = true
     }
 
     override var representedObject: Any? {

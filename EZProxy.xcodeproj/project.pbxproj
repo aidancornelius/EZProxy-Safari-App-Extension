@@ -24,6 +24,7 @@
 		129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */; };
 		12A3BFA623ED41C5006D3947 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3BFA523ED41C5006D3947 /* Security.framework */; };
 		12C402DA2806AC1500EC3411 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 12C402D92806AC1500EC3411 /* Credits.rtf */; };
+		12D0ABF32AF60EB7005188F0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D0ABF22AF60EB7005188F0 /* TestViewController.swift */; };
 		12FF0E4B252987F600F9D2A3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF0E4A252987F600F9D2A3 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		12C402D92806AC1500EC3411 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZProxy.entitlements; sourceTree = "<group>"; };
 		12C4AC3B2150AA3F0003B476 /* EZProxy Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EZProxy Safari.entitlements"; sourceTree = "<group>"; };
+		12D0ABF22AF60EB7005188F0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		12FF0E4A252987F600F9D2A3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		38DB2394DB9003AC6088506C /* Pods-EZProxy Safari.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy Safari.debug.xcconfig"; path = "Target Support Files/Pods-EZProxy Safari/Pods-EZProxy Safari.debug.xcconfig"; sourceTree = "<group>"; };
 		69FF54F66C1DC53D95B5C699 /* Pods_EZProxy_Safari.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZProxy_Safari.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				121BC17F21509A3C00BD885B /* Info.plist */,
 				12C402D92806AC1500EC3411 /* Credits.rtf */,
 				124A00A429517B1000C41C66 /* HelpViewController.swift */,
+				12D0ABF22AF60EB7005188F0 /* TestViewController.swift */,
 			);
 			path = EZProxy;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			files = (
 				121BC17921509A3800BD885B /* ViewController.swift in Sources */,
 				124A00A529517B1000C41C66 /* HelpViewController.swift in Sources */,
+				12D0ABF32AF60EB7005188F0 /* TestViewController.swift in Sources */,
 				121BC17721509A3800BD885B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +521,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EZProxy/Info.plist;
@@ -526,7 +530,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2022.12.1;
+				MARKETING_VERSION = 2023.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -545,7 +549,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EZProxy/Info.plist;
@@ -554,7 +558,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2022.12.1;
+				MARKETING_VERSION = 2023.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

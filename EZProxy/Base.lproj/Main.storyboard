@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="21701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22155"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="22155"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -154,7 +154,7 @@
                 <customObject id="zrm-Md-4xl" customClass="SUUpdater"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-73" y="-297"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="5Bq-ic-ek1">
@@ -206,12 +206,19 @@
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="QQ0-VX-gRf"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="LIm-1v-pvv"/>
-                                <toolbarItem implicitItemIdentifier="C9F8FD09-B28C-4365-AB32-70A9EC86AA70" label="Help" paletteLabel="Help" sizingBehavior="auto" id="icX-62-akx">
+                                <toolbarItem implicitItemIdentifier="C5583AB9-4F48-4D42-AB68-1622F989FB55" label="Test" paletteLabel="Test" tag="-1" image="point.topleft.down.curvedto.point.bottomright.up.fill" catalog="system" bordered="YES" id="OsT-aL-jaP">
+                                    <size key="minSize" width="27" height="25"/>
+                                    <size key="maxSize" width="27" height="25"/>
+                                    <connections>
+                                        <segue destination="T1v-p3-oAq" kind="popover" popoverAnchorView="OsT-aL-jaP" popoverBehavior="semitransient" preferredEdge="minY" id="Jcc-cc-73P"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="C9F8FD09-B28C-4365-AB32-70A9EC86AA70" label="Help" paletteLabel="Help" image="questionmark.circle" catalog="system" sizingBehavior="auto" id="icX-62-akx">
                                     <nil key="toolTip"/>
-                                    <button key="view" horizontalHuggingPriority="750" verticalHuggingPriority="750" id="nVS-Oo-1vU">
-                                        <rect key="frame" x="4" y="14" width="25" height="25"/>
+                                    <button key="view" id="nVS-Oo-1vU">
+                                        <rect key="frame" x="9" y="14" width="15" height="15"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oqt-kp-Tzt">
+                                        <buttonCell key="cell" type="help" bezelStyle="helpButton" image="questionmark.circle" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="oqt-kp-Tzt">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -224,6 +231,7 @@
                             <defaultToolbarItems>
                                 <toolbarItem reference="LIm-1v-pvv"/>
                                 <toolbarItem reference="icX-62-akx"/>
+                                <toolbarItem reference="OsT-aL-jaP"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -247,23 +255,23 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OAH-Qe-3Qb">
-                                <rect key="frame" x="341" y="247" width="138" height="138"/>
+                                <rect key="frame" x="353" y="259" width="126" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="AppIconPurple" id="TG1-wX-O7c"/>
                                 <color key="contentTintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                             </imageView>
                             <tabView fixedFrame="YES" initialItem="TkY-e4-hAm" translatesAutoresizingMaskIntoConstraints="NO" id="dYn-kr-jhu">
-                                <rect key="frame" x="16" y="2" width="471" height="243"/>
+                                <rect key="frame" x="16" y="2" width="471" height="255"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="Settings" identifier="" id="TkY-e4-hAm">
                                         <view key="view" id="wgv-N2-UHY">
-                                            <rect key="frame" x="10" y="33" width="451" height="197"/>
+                                            <rect key="frame" x="10" y="33" width="451" height="209"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdA-Xa-DVo">
-                                                    <rect key="frame" x="7" y="110" width="333" height="21"/>
+                                                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdA-Xa-DVo">
+                                                    <rect key="frame" x="7" y="103" width="333" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="ezproxy.library.sydney.edu.au" drawsBackground="YES" id="Rvc-rw-0aN">
                                                         <font key="font" metaFont="system"/>
@@ -272,7 +280,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-me-pKC">
-                                                    <rect key="frame" x="74" y="6" width="304" height="24"/>
+                                                    <rect key="frame" x="74" y="14" width="304" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="DjE-84-RCs">
                                                         <font key="font" metaFont="system"/>
@@ -285,17 +293,17 @@
                                                         <action selector="tabCloseBehaviourDidChange:" target="XfG-lQ-9wD" id="qaa-ug-cQF"/>
                                                     </connections>
                                                 </segmentedControl>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZqT-5J-lcw">
-                                                    <rect key="frame" x="5" y="180" width="169" height="17"/>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZqT-5J-lcw">
+                                                    <rect key="frame" x="5" y="187" width="338" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Set your library proxy url:" id="IMw-aK-eOm">
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Set your library proxy or OpenAthens domain name:" id="IMw-aK-eOm">
                                                         <font key="font" metaFont="systemBold"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGK-bR-RP8">
-                                                    <rect key="frame" x="5" y="40" width="432" height="35"/>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGK-bR-RP8">
+                                                    <rect key="frame" x="5" y="39" width="432" height="35"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" title="What should happen to the original tab when you click the proxy button?" id="4Rt-n1-Fq4">
                                                         <font key="font" metaFont="system"/>
@@ -303,18 +311,18 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QfI-PF-YCk">
-                                                    <rect key="frame" x="5" y="124" width="432" height="48"/>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QfI-PF-YCk">
+                                                    <rect key="frame" x="5" y="130" width="432" height="55"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" id="cJG-Lc-60A">
                                                         <font key="font" metaFont="system"/>
-                                                        <string key="title">This domain is provided by your institution, check with them for details. Do not include http://, https:// or anything following the URL.</string>
+                                                        <string key="title">This domain name is provided by your institution. You'll need this to proceed. This must only contain the proxy domain e.g. "ezproxy.library.sydney.edu.au" no https:// or /redirect?url=.</string>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZx-Av-0IG">
-                                                    <rect key="frame" x="5" y="82" width="169" height="17"/>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZx-Av-0IG">
+                                                    <rect key="frame" x="5" y="75" width="169" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Set tab close behaviour:" id="oPF-Dh-AUW">
                                                         <font key="font" metaFont="systemBold"/>
@@ -323,7 +331,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-nU-2mD">
-                                                    <rect key="frame" x="343" y="103" width="98" height="32"/>
+                                                    <rect key="frame" x="343" y="97" width="98" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Set Proxy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wTY-RA-ATs">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -335,30 +343,25 @@
                                                         <action selector="updateProxyClicked:" target="XfG-lQ-9wD" id="CVj-iO-vGO"/>
                                                     </connections>
                                                 </button>
-                                                <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdP-Vc-4m8">
-                                                    <rect key="frame" x="339" y="178" width="96" height="18"/>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgq-4T-IYI">
+                                                    <rect key="frame" x="430" y="187" width="16" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <levelIndicatorCell key="cell" alignment="left" maxValue="1" warningValue="2" criticalValue="3" id="wBt-aT-GQB"/>
-                                                </levelIndicator>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDv-Qg-anP">
-                                                    <rect key="frame" x="242" y="180" width="91" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Configuration:" id="hvo-ZD-t7U">
-                                                        <font key="font" metaFont="system"/>
-                                                        <color key="textColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="✔" id="MzT-a1-jz5">
+                                                        <font key="font" size="13" name="ZapfDingbatsITC"/>
+                                                        <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
                                         </view>
                                     </tabViewItem>
-                                    <tabViewItem label="Advanced" identifier="" id="ME8-0x-C0d">
+                                    <tabViewItem label="SSL &amp; OpenAthens" identifier="" id="ME8-0x-C0d">
                                         <view key="view" id="rXQ-VF-dqc">
-                                            <rect key="frame" x="10" y="33" width="451" height="197"/>
+                                            <rect key="frame" x="10" y="33" width="451" height="209"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sja-T0-W86">
-                                                    <rect key="frame" x="15" y="172" width="187" height="18"/>
+                                                    <rect key="frame" x="15" y="184" width="187" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" title="Use SSL for proxy requests" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vdy-QR-jaN">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -368,8 +371,8 @@
                                                         <action selector="useSSLClicked:" target="XfG-lQ-9wD" id="AGe-vC-gEd"/>
                                                     </connections>
                                                 </button>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQY-r1-TYI">
-                                                    <rect key="frame" x="34" y="108" width="396" height="58"/>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQY-r1-TYI">
+                                                    <rect key="frame" x="34" y="119" width="396" height="58"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" id="zdp-fI-bga">
                                                         <font key="font" metaFont="system"/>
@@ -378,18 +381,18 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78i-vR-meL">
-                                                    <rect key="frame" x="34" y="17" width="396" height="64"/>
+                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78i-vR-meL">
+                                                    <rect key="frame" x="34" y="24" width="396" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" id="xCs-wB-1FI">
                                                         <font key="font" metaFont="system"/>
-                                                        <string key="title">This setting uses https://go.openathens.net/redirector/{oaidentifier}?url={original-url} for access to proxied resources through an OpenAthens. Negates SSL setting above. </string>
+                                                        <string key="title">This setting uses https://go.openathens.net/redirector/{oaidentifier}?url={original-url} for access to proxied resources through an OpenAthens. If this is turned on the SSL setting above is automatically enabled, as required by OA.</string>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9m-Ka-tjx">
-                                                    <rect key="frame" x="15" y="83" width="197" height="18"/>
+                                                    <rect key="frame" x="15" y="95" width="197" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" title="My library uses OpenAthens" bezelStyle="regularSquare" imagePosition="left" inset="2" id="sFD-ao-eq8">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -407,7 +410,7 @@
                             <stackView focusRingType="none" distribution="fill" orientation="vertical" alignment="leading" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVP-aH-EjG">
                                 <rect key="frame" x="20" y="322" width="243" height="58"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-f7-VUp">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-f7-VUp">
                                         <rect key="frame" x="-2" y="42" width="71" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="To enable:" id="Isr-l1-kD6">
                                             <font key="font" metaFont="systemBold"/>
@@ -425,7 +428,7 @@
                                             <action selector="safariButtonPressed:" target="XfG-lQ-9wD" id="pXN-c2-fJx"/>
                                         </connections>
                                     </button>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vi-9Qj">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Vi-9Qj">
                                         <rect key="frame" x="-2" y="0.0" width="247" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Check the EZProxy Button in Extensions" id="9Qw-Ef-ZIj">
                                             <font key="font" metaFont="system"/>
@@ -452,11 +455,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="configurationIndicator" destination="mdP-Vc-4m8" id="Mb3-Jc-zWw"/>
-                        <outlet property="configurationText" destination="lDv-Qg-anP" id="zjT-6j-WPC"/>
                         <outlet property="descriptionForProxyURL" destination="cJG-Lc-60A" id="L9i-Vi-X9J"/>
                         <outlet property="openAthens" destination="j9m-Ka-tjx" id="Lzo-L7-QzS"/>
                         <outlet property="proxyUpdateField" destination="xdA-Xa-DVo" id="tls-Al-ulP"/>
+                        <outlet property="settingsOkay" destination="wgq-4T-IYI" id="AWi-rR-zsk"/>
                         <outlet property="tabCloseBehaviour" destination="MVL-me-pKC" id="sVv-e1-3CG"/>
                         <outlet property="useSSLBehaviour" destination="sja-T0-W86" id="yvt-2h-ubU"/>
                     </connections>
@@ -465,8 +467,56 @@
             </objects>
             <point key="canvasLocation" x="-229" y="913"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="tZ1-bu-AjW">
+            <objects>
+                <viewController id="T1v-p3-oAq" customClass="TestViewController" customModule="EZProxy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="mxH-N5-Km4">
+                        <rect key="frame" x="0.0" y="0.0" width="868" height="500"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUU-As-jn9">
+                                <rect key="frame" x="0.0" y="0.0" width="868" height="467"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                                <connections>
+                                    <outlet property="UIDelegate" destination="T1v-p3-oAq" id="SMZ-F5-82J"/>
+                                </connections>
+                            </wkWebView>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-cQ-sD9">
+                                <rect key="frame" x="18" y="475" width="831" height="16"/>
+                                <textFieldCell key="cell" alignment="center" id="VNg-ZX-HQv">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <string key="title">Below is a test of your settings using a static DOI. If you see a login screen from your institution things are most likely working correctly. </string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ZUU-As-jn9" firstAttribute="top" secondItem="RTP-cQ-sD9" secondAttribute="bottom" constant="8" symbolic="YES" id="7Wt-uc-G1n"/>
+                            <constraint firstItem="RTP-cQ-sD9" firstAttribute="leading" secondItem="mxH-N5-Km4" secondAttribute="leading" constant="20" symbolic="YES" id="GyL-t4-MbU"/>
+                            <constraint firstItem="ZUU-As-jn9" firstAttribute="leading" secondItem="mxH-N5-Km4" secondAttribute="leading" id="HsR-1m-lVw"/>
+                            <constraint firstItem="RTP-cQ-sD9" firstAttribute="top" secondItem="mxH-N5-Km4" secondAttribute="top" constant="9" id="SQ7-LN-yfO"/>
+                            <constraint firstAttribute="trailing" secondItem="ZUU-As-jn9" secondAttribute="trailing" id="fQx-KO-lF7"/>
+                            <constraint firstAttribute="trailing" secondItem="RTP-cQ-sD9" secondAttribute="trailing" constant="21" id="jXk-RQ-BwB"/>
+                            <constraint firstAttribute="bottom" secondItem="ZUU-As-jn9" secondAttribute="bottom" id="lUF-mA-JLe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testWebView" destination="ZUU-As-jn9" id="gsJ-qd-gXY"/>
+                    </connections>
+                </viewController>
+                <customObject id="SV8-8Y-fnB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="538" y="-211"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AppIconPurple" width="100" height="100"/>
+        <image name="point.topleft.down.curvedto.point.bottomright.up.fill" catalog="system" width="15" height="16"/>
+        <image name="questionmark.circle" catalog="system" width="15" height="15"/>
     </resources>
 </document>
