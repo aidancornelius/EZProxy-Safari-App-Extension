@@ -1,0 +1,14 @@
+{
+  "extension_name": {
+    "message": "EZProxy",
+    "description": "The extension name"
+  },
+  "extension_description": {
+    "message": "Access academic resources through your institution's proxy service",
+    "description": "The extension description"
+  },
+  "action_title": {
+    "message": "Access through EZProxy",
+    "description": "The tooltip for the toolbar button"
+  }
+}
