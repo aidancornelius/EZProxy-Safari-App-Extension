@@ -68,14 +68,22 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                             completeLibProxURL = URL(string: oabase)
                         }
                         
-                        // Now running the tab open earlier (not making it active)
-                        if self.getDataFromPlist( theKey: "keepTab" ) as! Bool == false {
-                            window.openTab(with: completeLibProxURL!, makeActiveIfPossible: false, completionHandler: nil)
-                            // Fixes Issue #9: closes the active tab (if last window open) after creating the new window, but doesn't make it active – doesn't need to, because the active tab is closed and Safari automatically opens the child tab(s) next
-                            activeTab!.close()
+                        // Check if we should use the content script method (preserves history)
+                        let useContentScript = self.getDataFromPlist(theKey: "useContentScript") as? Bool ?? false
+                        
+                        if useContentScript {
+                            // Use content script to navigate within the same tab, preserving history
+                            activePage?.dispatchMessageToScript(withName: "redirectToProxy", userInfo: ["proxyURL": completeLibProxURL!.absoluteString])
                         } else {
-                            // resumes the default behaviour of making the tab active
-                            window.openTab(with: completeLibProxURL!, makeActiveIfPossible: true, completionHandler: nil)
+                            // Use the traditional method of opening a new tab
+                            if self.getDataFromPlist( theKey: "keepTab" ) as! Bool == false {
+                                window.openTab(with: completeLibProxURL!, makeActiveIfPossible: false, completionHandler: nil)
+                                // Fixes Issue #9: closes the active tab (if last window open) after creating the new window, but doesn't make it active – doesn't need to, because the active tab is closed and Safari automatically opens the child tab(s) next
+                                activeTab!.close()
+                            } else {
+                                // resumes the default behaviour of making the tab active
+                                window.openTab(with: completeLibProxURL!, makeActiveIfPossible: true, completionHandler: nil)
+                            }
                         }
                         
                     }

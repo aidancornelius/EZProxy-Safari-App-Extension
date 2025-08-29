@@ -19,7 +19,7 @@ You can set up an OpenAthens proxy from the 'Advanced' tab. This is relatively n
 
 Contact me, or make an issue / pull request. :-)
 
-ac@schemist.com.au
+aidan@cornelius-bell.com
 
 ## License
 
