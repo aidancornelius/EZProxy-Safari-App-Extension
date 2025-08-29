@@ -3,46 +3,62 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		121BC17B21509A3C00BD885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 121BC17A21509A3C00BD885B /* Assets.xcassets */; };
-		121BC18D21509A5D00BD885B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BC18C21509A5D00BD885B /* Cocoa.framework */; };
-		121BC19021509A5D00BD885B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121BC18F21509A5D00BD885B /* SafariExtensionHandler.swift */; };
-		121BC19221509A5D00BD885B /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121BC19121509A5D00BD885B /* SafariExtensionViewController.swift */; };
-		121BC19521509A5D00BD885B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19321509A5D00BD885B /* SafariExtensionViewController.xib */; };
-		121BC19821509A5D00BD885B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19721509A5D00BD885B /* script.js */; };
-		121BC19A21509A5D00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
-		121BC19E21509A5D00BD885B /* EZProxy Safari.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 121BC18A21509A5D00BD885B /* EZProxy Safari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */; };
-		129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */; };
-		12A3BFA623ED41C5006D3947 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A3BFA523ED41C5006D3947 /* Security.framework */; };
-		12C402DA2806AC1500EC3411 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 12C402D92806AC1500EC3411 /* Credits.rtf */; };
-		12FF0E4B252987F600F9D2A3 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FF0E4A252987F600F9D2A3 /* SafariServices.framework */; };
 		AA00000121509A3800BD885B /* EZProxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000021509A3800BD885B /* EZProxyApp.swift */; };
 		AA00000321509A3800BD885B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000221509A3800BD885B /* SettingsView.swift */; };
 		AA00000521509A3800BD885B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000421509A3800BD885B /* SettingsViewModel.swift */; };
+		AA00000721509A3800BD885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00000621509A3800BD885B /* Assets.xcassets */; };
+		AA00000B21509A3800BD885B /* EZProxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000021509A3800BD885B /* EZProxyApp.swift */; };
+		AA00000D21509A3800BD885B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000221509A3800BD885B /* SettingsView.swift */; };
+		AA00000F21509A3800BD885B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000421509A3800BD885B /* SettingsViewModel.swift */; };
+		AA00001121509A3800BD885B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA00000621509A3800BD885B /* Assets.xcassets */; };
+		BB00000221509A5D00BD885B /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000121509A5D00BD885B /* SafariWebExtensionHandler.swift */; };
+		BB00000421509A5D00BD885B /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB00000121509A5D00BD885B /* SafariWebExtensionHandler.swift */; };
+		BB00000621509A5D00BD885B /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = BB00000521509A5D00BD885B /* Resources */; };
+		BB00000821509A5D00BD885B /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = BB00000521509A5D00BD885B /* Resources */; };
+		BB00000A21509A5D00BD885B /* EZProxy Web Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB00000921509A5D00BD885B /* EZProxy Web Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BB00000C21509A5D00BD885B /* EZProxy Web Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB00000B21509A5D00BD885B /* EZProxy Web Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		121BC19C21509A5D00BD885B /* PBXContainerItemProxy */ = {
+		BB00001021509A5D00BD885B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 121BC16B21509A3800BD885B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 121BC18921509A5D00BD885B;
-			remoteInfo = "EZProxy Safari";
+			remoteGlobalIDString = BB00000921509A5D00BD885B;
+			remoteInfo = "EZProxy Web Extension (macOS)";
+		};
+		BB00001221509A5D00BD885B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 121BC16B21509A3800BD885B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB00000B21509A5D00BD885B;
+			remoteInfo = "EZProxy Web Extension (iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		121BC1A221509A5D00BD885B /* Embed Foundation Extensions */ = {
+		BB00001421509A5D00BD885B /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				121BC19E21509A5D00BD885B /* EZProxy Safari.appex in Embed Foundation Extensions */,
+				BB00000A21509A5D00BD885B /* EZProxy Web Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB00001621509A5D00BD885B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB00000C21509A5D00BD885B /* EZProxy Web Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,31 +67,19 @@
 
 /* Begin PBXFileReference section */
 		121BC17321509A3800BD885B /* EZProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		121BC17A21509A3C00BD885B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		121BC17F21509A3C00BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		121BC18A21509A5D00BD885B /* EZProxy Safari.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZProxy Safari.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		121BC18C21509A5D00BD885B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		121BC18F21509A5D00BD885B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
-		121BC19121509A5D00BD885B /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
-		121BC19421509A5D00BD885B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
-		121BC19621509A5D00BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		121BC19721509A5D00BD885B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
-		129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AppIconPurple.pdf; sourceTree = "<group>"; };
-		12A3BFA523ED41C5006D3947 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		12AF1D5DD98FC19D749477B1 /* Pods-EZProxy Safari.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy Safari.release.xcconfig"; path = "Target Support Files/Pods-EZProxy Safari/Pods-EZProxy Safari.release.xcconfig"; sourceTree = "<group>"; };
-		12C402D92806AC1500EC3411 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZProxy.entitlements; sourceTree = "<group>"; };
-		12C4AC3B2150AA3F0003B476 /* EZProxy Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EZProxy Safari.entitlements"; sourceTree = "<group>"; };
-		12FF0E4A252987F600F9D2A3 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		38DB2394DB9003AC6088506C /* Pods-EZProxy Safari.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy Safari.debug.xcconfig"; path = "Target Support Files/Pods-EZProxy Safari/Pods-EZProxy Safari.debug.xcconfig"; sourceTree = "<group>"; };
-		69FF54F66C1DC53D95B5C699 /* Pods_EZProxy_Safari.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZProxy_Safari.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A29DFCE8A7DC624E450A41AD /* Pods-EZProxy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy.debug.xcconfig"; path = "Target Support Files/Pods-EZProxy/Pods-EZProxy.debug.xcconfig"; sourceTree = "<group>"; };
+		121BC17521509A3800BD885B /* EZProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA00000021509A3800BD885B /* EZProxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZProxyApp.swift; sourceTree = "<group>"; };
 		AA00000221509A3800BD885B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AA00000421509A3800BD885B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		D15D4419F0B54359AB083459 /* Pods_EZProxy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZProxy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F54765BC6A6833D45166F5A0 /* Pods-EZProxy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZProxy.release.xcconfig"; path = "Target Support Files/Pods-EZProxy/Pods-EZProxy.release.xcconfig"; sourceTree = "<group>"; };
+		AA00000621509A3800BD885B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA00000821509A3800BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA00000921509A3800BD885B /* EZProxy Universal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EZProxy Universal.entitlements"; sourceTree = "<group>"; };
+		BB00000121509A5D00BD885B /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		BB00000321509A5D00BD885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB00000521509A5D00BD885B /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		BB00000721509A5D00BD885B /* EZProxy Web Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EZProxy Web Extension.entitlements"; sourceTree = "<group>"; };
+		BB00000921509A5D00BD885B /* EZProxy Web Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZProxy Web Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB00000B21509A5D00BD885B /* EZProxy Web Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EZProxy Web Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +87,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12A3BFA623ED41C5006D3947 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		121BC18721509A5D00BD885B /* Frameworks */ = {
+		121BC17221509A3800BD885B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				121BC18D21509A5D00BD885B /* Cocoa.framework in Frameworks */,
-				12FF0E4B252987F600F9D2A3 /* SafariServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB00000D21509A5D00BD885B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB00000E21509A5D00BD885B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,11 +117,9 @@
 		121BC16A21509A3800BD885B = {
 			isa = PBXGroup;
 			children = (
-				121BC17521509A3800BD885B /* EZProxy */,
-				121BC18E21509A5D00BD885B /* EZProxy Safari */,
-				121BC18B21509A5D00BD885B /* Frameworks */,
+				AA00001821509A3800BD885B /* EZProxy Universal */,
+				BB00001821509A5D00BD885B /* EZProxy Web Extension */,
 				121BC17421509A3800BD885B /* Products */,
-				3046F6DB68E587106A5C7F4E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,102 +127,110 @@
 			isa = PBXGroup;
 			children = (
 				121BC17321509A3800BD885B /* EZProxy.app */,
-				121BC18A21509A5D00BD885B /* EZProxy Safari.appex */,
+				121BC17521509A3800BD885B /* EZProxy.app */,
+				BB00000921509A5D00BD885B /* EZProxy Web Extension.appex */,
+				BB00000B21509A5D00BD885B /* EZProxy Web Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		121BC17521509A3800BD885B /* EZProxy */ = {
+		AA00001821509A3800BD885B /* EZProxy Universal */ = {
 			isa = PBXGroup;
 			children = (
-				12C4AC3A2150AA3A0003B476 /* EZProxy.entitlements */,
 				AA00000021509A3800BD885B /* EZProxyApp.swift */,
 				AA00000221509A3800BD885B /* SettingsView.swift */,
 				AA00000421509A3800BD885B /* SettingsViewModel.swift */,
-				121BC17A21509A3C00BD885B /* Assets.xcassets */,
-				129C8AF223F4FC8200A5D5FC /* AppIconPurple.pdf */,
-				121BC17F21509A3C00BD885B /* Info.plist */,
-				12C402D92806AC1500EC3411 /* Credits.rtf */,
+				AA00000621509A3800BD885B /* Assets.xcassets */,
+				AA00000821509A3800BD885B /* Info.plist */,
+				AA00000921509A3800BD885B /* EZProxy Universal.entitlements */,
 			);
-			path = EZProxy;
+			path = "EZProxy Universal";
 			sourceTree = "<group>";
 		};
-		121BC18B21509A5D00BD885B /* Frameworks */ = {
+		BB00001821509A5D00BD885B /* EZProxy Web Extension */ = {
 			isa = PBXGroup;
 			children = (
-				12FF0E4A252987F600F9D2A3 /* SafariServices.framework */,
-				12A3BFA523ED41C5006D3947 /* Security.framework */,
-				121BC18C21509A5D00BD885B /* Cocoa.framework */,
-				D15D4419F0B54359AB083459 /* Pods_EZProxy.framework */,
-				69FF54F66C1DC53D95B5C699 /* Pods_EZProxy_Safari.framework */,
+				BB00000121509A5D00BD885B /* SafariWebExtensionHandler.swift */,
+				BB00000521509A5D00BD885B /* Resources */,
+				BB00000321509A5D00BD885B /* Info.plist */,
+				BB00000721509A5D00BD885B /* EZProxy Web Extension.entitlements */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		121BC18E21509A5D00BD885B /* EZProxy Safari */ = {
-			isa = PBXGroup;
-			children = (
-				12C4AC3B2150AA3F0003B476 /* EZProxy Safari.entitlements */,
-				121BC18F21509A5D00BD885B /* SafariExtensionHandler.swift */,
-				121BC19121509A5D00BD885B /* SafariExtensionViewController.swift */,
-				121BC19321509A5D00BD885B /* SafariExtensionViewController.xib */,
-				121BC19621509A5D00BD885B /* Info.plist */,
-				121BC19721509A5D00BD885B /* script.js */,
-				121BC19921509A5D00BD885B /* ToolbarItemIcon.pdf */,
-			);
-			path = "EZProxy Safari";
-			sourceTree = "<group>";
-		};
-		3046F6DB68E587106A5C7F4E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A29DFCE8A7DC624E450A41AD /* Pods-EZProxy.debug.xcconfig */,
-				F54765BC6A6833D45166F5A0 /* Pods-EZProxy.release.xcconfig */,
-				38DB2394DB9003AC6088506C /* Pods-EZProxy Safari.debug.xcconfig */,
-				12AF1D5DD98FC19D749477B1 /* Pods-EZProxy Safari.release.xcconfig */,
-			);
-			path = Pods;
+			path = "EZProxy Web Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		121BC17221509A3800BD885B /* EZProxy */ = {
+		121BC17221509A3800BD885B /* EZProxy (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 121BC18321509A3C00BD885B /* Build configuration list for PBXNativeTarget "EZProxy" */;
+			buildConfigurationList = 121BC18321509A3C00BD885B /* Build configuration list for PBXNativeTarget "EZProxy (macOS)" */;
 			buildPhases = (
-				2ED0A403F0BCA60D7366E48F /* [CP] Check Pods Manifest.lock */,
 				121BC16F21509A3800BD885B /* Sources */,
 				121BC17021509A3800BD885B /* Frameworks */,
 				121BC17121509A3800BD885B /* Resources */,
-				121BC1A221509A5D00BD885B /* Embed Foundation Extensions */,
+				BB00001421509A5D00BD885B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				121BC19D21509A5D00BD885B /* PBXTargetDependency */,
+				BB00001121509A5D00BD885B /* PBXTargetDependency */,
 			);
-			name = EZProxy;
+			name = "EZProxy (macOS)";
 			productName = EZProxy;
 			productReference = 121BC17321509A3800BD885B /* EZProxy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		121BC18921509A5D00BD885B /* EZProxy Safari */ = {
+		121BC17421509A3800BD885B /* EZProxy (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 121BC19F21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Safari" */;
+			buildConfigurationList = 121BC18521509A3C00BD885B /* Build configuration list for PBXNativeTarget "EZProxy (iOS)" */;
 			buildPhases = (
-				2360D9C88C35480803BB8BAC /* [CP] Check Pods Manifest.lock */,
-				121BC18621509A5D00BD885B /* Sources */,
-				121BC18721509A5D00BD885B /* Frameworks */,
-				121BC18821509A5D00BD885B /* Resources */,
+				121BC17621509A3800BD885B /* Sources */,
+				121BC17221509A3800BD885B /* Frameworks */,
+				121BC17721509A3800BD885B /* Resources */,
+				BB00001621509A5D00BD885B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB00001321509A5D00BD885B /* PBXTargetDependency */,
+			);
+			name = "EZProxy (iOS)";
+			productName = EZProxy;
+			productReference = 121BC17521509A3800BD885B /* EZProxy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB00000921509A5D00BD885B /* EZProxy Web Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB00001A21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Web Extension (macOS)" */;
+			buildPhases = (
+				BB00001521509A5D00BD885B /* Sources */,
+				BB00000D21509A5D00BD885B /* Frameworks */,
+				BB00001721509A5D00BD885B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "EZProxy Safari";
-			productName = "EZProxy Safari";
-			productReference = 121BC18A21509A5D00BD885B /* EZProxy Safari.appex */;
+			name = "EZProxy Web Extension (macOS)";
+			productName = "EZProxy Web Extension";
+			productReference = BB00000921509A5D00BD885B /* EZProxy Web Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		BB00000B21509A5D00BD885B /* EZProxy Web Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB00001C21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Web Extension (iOS)" */;
+			buildPhases = (
+				BB00001921509A5D00BD885B /* Sources */,
+				BB00000E21509A5D00BD885B /* Frameworks */,
+				BB00001B21509A5D00BD885B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EZProxy Web Extension (iOS)";
+			productName = "EZProxy Web Extension";
+			productReference = BB00000B21509A5D00BD885B /* EZProxy Web Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -218,33 +239,26 @@
 		121BC16B21509A3800BD885B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1640;
-				ORGANIZATIONNAME = "Aidan Cornelius-Bell";
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					121BC17221509A3800BD885B = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1130;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 0;
-							};
-						};
+						CreatedOnToolsVersion = 15.0;
 					};
-					121BC18921509A5D00BD885B = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1130;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
+					121BC17421509A3800BD885B = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					BB00000921509A5D00BD885B = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					BB00000B21509A5D00BD885B = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
 			buildConfigurationList = 121BC16E21509A3800BD885B /* Build configuration list for PBXProject "EZProxy" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -256,8 +270,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				121BC17221509A3800BD885B /* EZProxy */,
-				121BC18921509A5D00BD885B /* EZProxy Safari */,
+				121BC17221509A3800BD885B /* EZProxy (macOS) */,
+				121BC17421509A3800BD885B /* EZProxy (iOS) */,
+				BB00000921509A5D00BD885B /* EZProxy Web Extension (macOS) */,
+				BB00000B21509A5D00BD885B /* EZProxy Web Extension (iOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -267,71 +283,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12C402DA2806AC1500EC3411 /* Credits.rtf in Resources */,
-				121BC17B21509A3C00BD885B /* Assets.xcassets in Resources */,
-				121BC1A92150A0AA00BD885B /* ToolbarItemIcon.pdf in Resources */,
-				129C8AF323F4FC8200A5D5FC /* AppIconPurple.pdf in Resources */,
+				AA00000721509A3800BD885B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		121BC18821509A5D00BD885B /* Resources */ = {
+		121BC17721509A3800BD885B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				121BC19A21509A5D00BD885B /* ToolbarItemIcon.pdf in Resources */,
-				121BC19521509A5D00BD885B /* SafariExtensionViewController.xib in Resources */,
-				121BC19821509A5D00BD885B /* script.js in Resources */,
+				AA00001121509A3800BD885B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB00001721509A5D00BD885B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB00000621509A5D00BD885B /* Resources in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB00001B21509A5D00BD885B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB00000821509A5D00BD885B /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2360D9C88C35480803BB8BAC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EZProxy Safari-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2ED0A403F0BCA60D7366E48F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EZProxy-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		121BC16F21509A3800BD885B /* Sources */ = {
@@ -344,46 +324,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		121BC18621509A5D00BD885B /* Sources */ = {
+		121BC17621509A3800BD885B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				121BC19221509A5D00BD885B /* SafariExtensionViewController.swift in Sources */,
-				121BC19021509A5D00BD885B /* SafariExtensionHandler.swift in Sources */,
+				AA00000B21509A3800BD885B /* EZProxyApp.swift in Sources */,
+				AA00000D21509A3800BD885B /* SettingsView.swift in Sources */,
+				AA00000F21509A3800BD885B /* SettingsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB00001521509A5D00BD885B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB00000221509A5D00BD885B /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB00001921509A5D00BD885B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB00000421509A5D00BD885B /* SafariWebExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		121BC19D21509A5D00BD885B /* PBXTargetDependency */ = {
+		BB00001121509A5D00BD885B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 121BC18921509A5D00BD885B /* EZProxy Safari */;
-			targetProxy = 121BC19C21509A5D00BD885B /* PBXContainerItemProxy */;
+			target = BB00000921509A5D00BD885B /* EZProxy Web Extension (macOS) */;
+			targetProxy = BB00001021509A5D00BD885B /* PBXContainerItemProxy */;
+		};
+		BB00001321509A5D00BD885B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB00000B21509A5D00BD885B /* EZProxy Web Extension (iOS) */;
+			targetProxy = BB00001221509A5D00BD885B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		121BC19321509A5D00BD885B /* SafariExtensionViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				121BC19421509A5D00BD885B /* Base */,
-			);
-			name = SafariExtensionViewController.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		121BC18121509A3C00BD885B /* Debug */ = {
+		121BC17E21509A3C00BD885B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -409,15 +399,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -431,25 +418,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		121BC18221509A3C00BD885B /* Release */ = {
+		121BC17F21509A3C00BD885B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -475,15 +460,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -491,122 +473,282 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		121BC18421509A3C00BD885B /* Debug */ = {
+		121BC18121509A3C00BD885B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A29DFCE8A7DC624E450A41AD /* Pods-EZProxy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EZProxy/EZProxy.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Universal/EZProxy Universal.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = EZProxy/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Universal/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = EZProxy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Aidan Cornelius-Bell. Some rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2025.08.29;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				REGISTER_APP_GROUPS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "EZProxy/EZProxy-Bridging-Header.h";
+				PRODUCT_NAME = EZProxy;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		121BC18521509A3C00BD885B /* Release */ = {
+		121BC18221509A3C00BD885B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F54765BC6A6833D45166F5A0 /* Pods-EZProxy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = EZProxy/EZProxy.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Universal/EZProxy Universal.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = EZProxy/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Universal/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = EZProxy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Aidan Cornelius-Bell. Some rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2025.08.29;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				REGISTER_APP_GROUPS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "EZProxy/EZProxy-Bridging-Header.h";
+				PRODUCT_NAME = EZProxy;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		121BC1A021509A5D00BD885B /* Debug */ = {
+		121BC18321509A3C00BD885B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38DB2394DB9003AC6088506C /* Pods-EZProxy Safari.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Universal/EZProxy Universal.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Universal/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = EZProxy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
+				PRODUCT_NAME = EZProxy;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		121BC18421509A3C00BD885B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Universal/EZProxy Universal.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Universal/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = EZProxy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy";
+				PRODUCT_NAME = EZProxy;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB00001D21509A5D00BD885B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Web Extension/EZProxy Web Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Web Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EZProxy Web Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Aidan Cornelius-Bell. Some rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2025.08.29;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				REGISTER_APP_GROUPS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 3.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.WebExtension";
+				PRODUCT_NAME = "EZProxy Web Extension";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		121BC1A121509A5D00BD885B /* Release */ = {
+		BB00001E21509A5D00BD885B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12AF1D5DD98FC19D749477B1 /* Pods-EZProxy Safari.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "EZProxy Safari/EZProxy Safari.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Web Extension/EZProxy Web Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "EZProxy Safari/Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Web Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EZProxy Web Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Aidan Cornelius-Bell. Some rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2025.08.29;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.EZProxy-Safari";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				REGISTER_APP_GROUPS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 3.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.WebExtension";
+				PRODUCT_NAME = "EZProxy Web Extension";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BB00001F21509A5D00BD885B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Web Extension/EZProxy Web Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Web Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EZProxy Web Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Aidan Cornelius-Bell. Some rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 3.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.WebExtension";
+				PRODUCT_NAME = "EZProxy Web Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB00002021509A5D00BD885B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "EZProxy Web Extension/EZProxy Web Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HK6R36PLNR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EZProxy Web Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "EZProxy Web Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © Aidan Cornelius-Bell. Some rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 3.0.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornelius-bell.EZProxy.WebExtension";
+				PRODUCT_NAME = "EZProxy Web Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -616,26 +758,44 @@
 		121BC16E21509A3800BD885B /* Build configuration list for PBXProject "EZProxy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
+				121BC17E21509A3C00BD885B /* Debug */,
+				121BC17F21509A3C00BD885B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		121BC18321509A3C00BD885B /* Build configuration list for PBXNativeTarget "EZProxy (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
 				121BC18121509A3C00BD885B /* Debug */,
 				121BC18221509A3C00BD885B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		121BC18321509A3C00BD885B /* Build configuration list for PBXNativeTarget "EZProxy" */ = {
+		121BC18521509A3C00BD885B /* Build configuration list for PBXNativeTarget "EZProxy (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				121BC18421509A3C00BD885B /* Debug */,
-				121BC18521509A3C00BD885B /* Release */,
+				121BC18321509A3C00BD885B /* Debug */,
+				121BC18421509A3C00BD885B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		121BC19F21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Safari" */ = {
+		BB00001A21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Web Extension (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				121BC1A021509A5D00BD885B /* Debug */,
-				121BC1A121509A5D00BD885B /* Release */,
+				BB00001D21509A5D00BD885B /* Debug */,
+				BB00001E21509A5D00BD885B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB00001C21509A5D00BD885B /* Build configuration list for PBXNativeTarget "EZProxy Web Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB00001F21509A5D00BD885B /* Debug */,
+				BB00002021509A5D00BD885B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

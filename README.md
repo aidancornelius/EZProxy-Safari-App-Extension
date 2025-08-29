@@ -23,9 +23,7 @@ A modern, cross-platform Safari extension for accessing academic resources throu
 
 ### From App Store
 
-[Download from Mac App Store](https://apps.apple.com/au/app/ezproxy-for-safari/id1542011791?mt=12)
-
-*Note: iOS version coming soon*
+[Download from the App Store](https://apps.apple.com/au/app/ezproxy-for-safari/id1542011791?mt=12)
 
 ## Configuration
 
